@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="rgb(0, 173, 239)">
+    <meta name="author" content="WebNet">
+    <meta name="description" content="app">
+    <meta name="keywords" content="app">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="manifest" href="public/json/manifest.json">
+    <link rel="icon" type="image/png" href="public/img/logo.png">
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="apple-touch-icon" href="public/img/logo.png">
+    <title>App</title>
+</head>
+<body>
+	<script>
+        // Регистрация сервисного работника
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+            navigator.serviceWorker.register('service-worker.js')
+            .then((reg) => {
+            //console.log('Сервисный работник зарегистрирован.', reg);
+            });
+        });}
+        // Возможность добавить на главный экран приложение для IOS Safari
+        const isIos = () => {
+            const userAgent = window.navigator.userAgent.toLowerCase();
+            return /iphone|ipad|ipod/.test( userAgent );
+        };
+        // Проверяем, открыто ли приложение отдельно или в браузере
+         const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
+        // Если приложение открыто на iOS и в браузере, то предлагаем установить
+        if (isIos() && !isInStandaloneMode()) {
+            this.setState({ isShown: true }); // На примере React
+        }
+	</script>
+</body>
+</html>
