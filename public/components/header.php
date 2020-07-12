@@ -1,6 +1,6 @@
 <?php
 
-    $title = 'Mektep';
+    $title = 'Издательство Мектеп';
     $lang = 'ru';
     $logo = 'logoRu';
 
@@ -17,8 +17,8 @@
     <meta charset="UTF-8">
     <meta name="theme-color" content="rgb(27, 77, 162)">
     <meta name="author" content="WebNet">
-    <meta name="description" content="app">
-    <meta name="keywords" content="app">
+    <meta name="description" content="<?=$title?>">
+    <meta name="keywords" content="<?=$title?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="manifest" href="public/json/manifest.json">
@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="public/css/style.css">
     <link rel="stylesheet" href="public/css/mStyle.css">
     <link rel="apple-touch-icon" href="public/img/logo.png">
-    <title>Mektep</title>
+    <title><?=$title?></title>
 </head>
 <body>
 
@@ -35,9 +35,9 @@
             <img src="public/img/<?=$logo?>.png" alt="логотип издательства Мектеп">
         </a>
         <menu>
-            <span class="menuItem">menu</span>
-            <span class="menuItem">menu</span>
-            <span class="menuItem">menu</span>
-            <span class="menuItem">menu</span>
+            <li class="menuItem">menu</li>
+            <li class="menuItem">menu</li>
+            <li class="menuItem">menu</li>
+            <li class="menuItem">contacts</li>
         </menu>
     </header>
