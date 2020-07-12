@@ -1,21 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="theme-color" content="rgb(0, 173, 239)">
-    <meta name="author" content="WebNet">
-    <meta name="description" content="app">
-    <meta name="keywords" content="app">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="manifest" href="public/json/manifest.json">
-    <link rel="icon" type="image/png" href="public/img/logo.png">
-    <link rel="stylesheet" href="public/css/style.css">
-    <link rel="apple-touch-icon" href="public/img/logo.png">
-    <title>App</title>
-</head>
-<body>
-	<script>
+<?php
+
+    require_once 'public/components/header.php';
+    
+?>
+    <script>
         // Регистрация сервисного работника
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {

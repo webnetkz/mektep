@@ -1,9 +1,9 @@
 {
-  "short_name": "App",
-  "name": "App",
+  "short_name": "Mektep",
+  "name": "Mektep",
   "start_url": "/",
   "background_color": "rgb(255, 255, 255)",
-  "theme_color": "rgb(0, 173, 239)",
+  "theme_color": "rgb(27, 77, 162)",
   "display": "fullscreen",
   "prefer_related_applications": false,
   "icons": [{
