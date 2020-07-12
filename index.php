@@ -1,7 +1,7 @@
 <?php
 
     require_once 'public/components/header.php';
-    
+
 ?>
     <script>
         // Регистрация сервисного работника
@@ -21,7 +21,8 @@
          const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone);
         // Если приложение открыто на iOS и в браузере, то предлагаем установить
         if (isIos() && !isInStandaloneMode()) {
-            this.setState({ isShown: true }); // На примере React
+            //this.setState({ isShown: true }); // На примере React
+            console.log(isIos());
         }
 	</script>
 </body>

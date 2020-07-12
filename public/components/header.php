@@ -22,7 +22,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="manifest" href="public/json/manifest.json">
-    <link rel="icon" type="image/png" href="public/img/logo.png">
+    <link rel="icon" type="image/png" href="public/img/logoRu.png">
     <link rel="stylesheet" href="public/css/style.css">
     <link rel="stylesheet" href="public/css/mStyle.css">
     <link rel="apple-touch-icon" href="public/img/logo.png">
