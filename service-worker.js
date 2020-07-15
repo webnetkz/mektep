@@ -3,7 +3,9 @@ self.addEventListener('install', function(e) {
    caches.open('title').then(function(cache) {
      return cache.addAll([
        '/',
-       '/index.html',
+       '/index',
+       '/library',
+       '/contacts',
        '/public/json/manifest.json',
        '/public/img/logoKz.png',
        '/public/img/logoRu.png',
