@@ -5,6 +5,7 @@
 body {
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 header {
     display: flex;
@@ -17,15 +18,20 @@ header {
     background-color: rgba(255, 255, 255, 0.5);
     box-shadow: 0 0 10px rgb(0, 0, 0);
     align-items: center;
+    transition-duration: 1600ms;
+    padding-left: 33px;
+}
+.logoLink {
+    border-radius: 12px;
 }
 .logoHeader {
     height: 70px;
-    padding-left: 40px;
+    padding: 7px;
 }
 menu {
     display: flex;
     position: absolute;
-    right: 40px;
+    right: 45px;
 }
 .menuLink {
     text-decoration: none;
