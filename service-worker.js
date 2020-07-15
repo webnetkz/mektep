@@ -7,8 +7,8 @@ self.addEventListener('install', function(e) {
        '/library',
        '/contacts',
        '/public/json/manifest.json',
-       '/public/img/logoKz.png',
-       '/public/img/logoRu.png',
+       '/public/img/logoKz.webp',
+       '/public/img/logoRu.webp',
        '/public/css/style.css',
        '/public/css/mStyle.css'
      ]);

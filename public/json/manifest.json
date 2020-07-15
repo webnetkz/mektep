@@ -1,58 +1,58 @@
 {
-  "short_name": "Mektep",
-  "name": "Mektep",
+  "short_name": "Мектеп",
+  "name": "Издательство Мектеп",
   "start_url": "/",
   "background_color": "rgb(255, 255, 255)",
   "theme_color": "rgb(27, 77, 162)",
   "display": "fullscreen",
   "prefer_related_applications": false,
   "icons": [{
-    "src": "public/img/logo.png",
+    "src": "public/img/logoRu.webp",
     "sizes": "48x48",
     "type": "image/png",
     "purpose": "maskable"
   }, {
-    "src": "public/img/logo.png",
+    "src": "public/img/logoRu.webp",
     "sizes": "72x72",
     "type": "image/png",
     "purpose": "maskable"
   }, {
-    "src": "public/img/logo.png",
+    "src": "public/img/logoRu.webp",
     "sizes": "96x96",
     "type": "image/png",
     "purpose": "maskable"
   },{
-    "src": "public/img/logo.png",
+    "src": "public/img/logoRu.webp",
     "sizes": "128x128",
     "type": "image/png",
     "purpose": "maskable"
   }, {
-    "src": "public/img/logo.png",
+    "src": "public/img/logoRu.webp",
     "sizes": "144x144",
     "type": "image/png",
     "purpose": "maskable"
   },{
-    "src": "public/img/logo.png",
+    "src": "public/img/logoRu.webp",
     "sizes": "152x152",
     "type": "image/png",
     "purpose": "maskable"
   }, {
-    "src": "public/img/logo.png",
+    "src": "public/img/logoRu.webp",
     "sizes": "168x168",
     "type": "image/png",
     "purpose": "maskable"
   }, {
-    "src": "public/img/logo.png",
+    "src": "public/img/logoRu.webp",
     "sizes": "192x192",
     "type": "image/png",
     "purpose": "maskable"
   }, {
-    "src": "public/img/logo.png",
+    "src": "public/img/logoRu.png",
     "sizes": "256x256",
     "type": "image/png",
     "purpose": "maskable"
   }, {
-    "src": "public/img/logo.png",
+    "src": "public/img/logoRu.webp",
     "sizes": "512x512",
     "type": "image/png",
     "purpose": "maskable"
