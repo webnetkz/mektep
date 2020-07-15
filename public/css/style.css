@@ -3,10 +3,100 @@
     padding: 0;
 }
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
 }
 header {
+    display: flex;
     position: fixed;
     top: 0;
     left: 0;
+    height: 100px;
+    width: 100vw;
+    z-index: 99;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    align-items: center;
+}
+.logoHeader {
+    height: 70px;
+}
+menu {
+    display: flex;
+    position: absolute;
+    right: 40px;
+}
+.menuLink {
+    text-decoration: none;
+}
+.menuItem {
+    list-style: none;
+    color: rgb(255, 255, 255);
+    padding: 8px;
+    padding-left: 15px;
+    font-size: 1.2em;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+.logoLink {
+    padding: 5px;
+    padding-left: 40px;
+}
+#bgImg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+    background-image: url('../img/bgImg/1.jpg');
+    background-size: cover;
+    animation: bgChange 35s infinite;
+}
+@keyframes bgChange {
+    0% {
+        background-image: url('../img/bgImg/1.jpg');
+    }
+    15% {
+        background-image: url('../img/bgImg/3.jpg');
+    }
+    30% {
+        background-image: url('../img/bgImg/5.jpg');
+    }
+    45% {
+        background-image: url('../img/bgImg/6.jpg');
+    }
+    60% {
+        background-image: url('../img/bgImg/13.jpg');
+    }
+    75% {
+        background-image: url('../img/bgImg/12.jpg');
+    }
+    90% {
+        background-image: url('../img/bgImg/11.jpg');
+    }
+}
+.indexHeader {
+    position: absolute;
+    width: 100vw;
+    top: 35vh;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-weight: 300;
+    font-size: 3.1em;
+}
+.linkBtn {
+    position: relative;
+    top: 50vh;
+    padding: 17px;
+    background-color: rgb(12, 77, 162);
+    border-radius: 30px;
+    color: rgb(255, 255, 255);
+    font-size: 1.4em;
+    text-decoration: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transition-duration: 700ms;
+}
+.linkBtn:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
 }

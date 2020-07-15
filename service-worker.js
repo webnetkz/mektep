@@ -3,11 +3,12 @@ self.addEventListener('install', function(e) {
    caches.open('title').then(function(cache) {
      return cache.addAll([
        '/',
-       '/index.php',
+       '/index.html',
        '/public/json/manifest.json',
        '/public/img/logoKz.png',
        '/public/img/logoRu.png',
-       '/public/css/style.css'
+       '/public/css/style.css',
+       '/public/css/mStyle.css'
      ]);
    })
  );
