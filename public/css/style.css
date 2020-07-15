@@ -32,15 +32,12 @@ menu {
 .menuItem {
     list-style: none;
     color: rgb(255, 255, 255);
-    padding: 8px;
+    padding: 12px;
+    padding-left: 40px;
     padding-left: 15px;
     font-size: 1.2em;
     font-weight: 100;
     text-transform: uppercase;
-}
-.logoLink {
-    padding: 5px;
-    padding-left: 40px;
 }
 #bgImg {
     position: fixed;
@@ -49,31 +46,31 @@ menu {
     height: 100vh;
     width: 100vw;
     z-index: -1;
-    background-image: url('../img/bgImg/1.jpg');
+    background-image: url('../img/bgImg/1.webp');
     background-size: cover;
     animation: bgChange 35s infinite;
 }
 @keyframes bgChange {
     0% {
-        background-image: url('../img/bgImg/1.jpg');
+        background-image: url('../img/bgImg/1.webp');
     }
-    15% {
-        background-image: url('../img/bgImg/3.jpg');
+    20% {
+        background-image: url('../img/bgImg/3.webp');
     }
     30% {
-        background-image: url('../img/bgImg/5.jpg');
+        background-image: url('../img/bgImg/5.webp');
     }
     45% {
-        background-image: url('../img/bgImg/6.jpg');
+        background-image: url('../img/bgImg/6.webp');
     }
     60% {
-        background-image: url('../img/bgImg/13.jpg');
+        background-image: url('../img/bgImg/13.webp');
     }
     75% {
-        background-image: url('../img/bgImg/12.jpg');
+        background-image: url('../img/bgImg/12.webp');
     }
     90% {
-        background-image: url('../img/bgImg/11.jpg');
+        background-image: url('../img/bgImg/11.webp');
     }
 }
 .indexHeader {

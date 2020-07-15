@@ -28,19 +28,17 @@
             <img src="public/img/<?=$logo?>.png" alt="логотип издательства Мектеп" class="logoHeader">
         </a>
         <menu>
-            <ul>
-                <a href="index" class="menuLink">
-                    <li class="menuItem">Главная</li>
-                </a>
-                <a href="library" class="menuLink">
-                    <li class="menuItem">Библиотека</li>
-                </a>
-                <a href="contacts" class="menuLink">
-                    <li class="menuItem">Контакты</li>
-                </a>
-                <a href="#" class="menuLink">
-                    <li class="menuItem">Войти</li>
-                </a>
-            </ul>
+            <a href="index" class="menuItem">
+                Главная
+            </a>
+            <a href="library" class="menuItem">
+                Библиотека
+            </a>
+            <a href="contacts" class="menuItem">
+                Контакты
+            </a>
+            <a href="#" class="menuItem">
+                Войти
+            </a>
         </menu>
     </header>
