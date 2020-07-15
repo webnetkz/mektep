@@ -4,7 +4,7 @@
 }
 body {
     font-family: 'Montserrat', sans-serif;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 header {
     display: flex;
@@ -20,6 +20,7 @@ header {
 }
 .logoHeader {
     height: 70px;
+    padding-left: 40px;
 }
 menu {
     display: flex;
@@ -30,12 +31,12 @@ menu {
     text-decoration: none;
 }
 .menuItem {
-    color: rgb(255, 255, 255);
+    color: rgb(12, 77, 162);
     padding: 12px;
     padding-left: 40px;
     padding-left: 15px;
     font-size: 1.2em;
-    font-weight: 100;
+    font-weight: 300;
     text-transform: uppercase;
     text-decoration: none;
 }
@@ -96,4 +97,9 @@ menu {
 }
 .linkBtn:hover {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+}
+#content {
+    position: absolute;
+    top: 120px;
+    width: 100vw;
 }

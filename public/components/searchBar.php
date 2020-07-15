@@ -1,0 +1,3 @@
+﻿<section id="searchBar">
+    
+</section>

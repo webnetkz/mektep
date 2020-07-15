@@ -3,14 +3,72 @@
     $title = 'Контакты Мектеп';
     $lang = 'ru';
     $logo = 'logoRu';
+    $style = 'footer';
+    $styleTwo = 'style';
 
     require_once 'public/components/header.php';
     
 ?>
-    <h1 class="indexHeader">Издательство Мектеп</h1>
-    <div style="text-align: center;">
-        <a href="library" class="linkBtn">Библиотека</a>
-    </div>
+    <section id="content">
+        <pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        </pre>
+        <?php
+            require_once 'public/components/footer.php';
+        ?>
+    </section>
     
 </body>
 </html>

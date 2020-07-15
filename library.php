@@ -3,14 +3,55 @@
     $title = 'Библиотека Мектеп';
     $lang = 'ru';
     $logo = 'logoRu';
+    $style = 'searchBar';
+    $styleTwo = 'footer';
 
     require_once 'public/components/header.php';
     
 ?>
-    <h1 class="indexHeader">Издательство Мектеп</h1>
-    <div style="text-align: center;">
-        <a href="library" class="linkBtn">Библиотека</a>
-    </div>
+
+    <section id="content">
+        <?php
+            require_once 'public/components/searchBar.php';
+        ?>
+        <pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        </pre>
+        <?php
+            require_once 'public/components/footer.php';
+        ?>
+    </section>
     
 </body>
 </html>

@@ -3,10 +3,18 @@
     $title = 'Издательство Мектеп';
     $lang = 'ru';
     $logo = 'logoRu';
+    $style = 'style';
+    $styleTwo = 'style';
 
     require_once 'public/components/header.php';
     
 ?>
+    <style>
+        body {
+            overflow: hidden;
+        }
+    </style>
+    <div id="bgImg"></div>
     <h1 class="indexHeader">Издательство Мектеп</h1>
     <div style="text-align: center;">
         <a href="library" class="linkBtn">Библиотека</a>
