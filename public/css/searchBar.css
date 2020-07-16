@@ -1,6 +1,6 @@
 ﻿#searchBar {
     position: relative;
-    top: -20px;
+    top: -35px;
     left: 0;
     width: 100vw;
     height: 90px;
@@ -21,7 +21,27 @@
     text-align: center;
     outline: none;
     transition-duration: 600ms;
+    color: rgb(12, 77, 162);
+}
+.searchInp::placeholder {
+    color: rgb(12, 77, 162);
 }
 .searchInp:focus {
-    box-shadow: 0 0 10px rgb(3, 17, 36);
+    box-shadow: 0 0 10px rgb(227, 238, 255);
+}
+.searchInputFrom {
+    width: 100vw;
+}
+.searchInput {
+    outline: none;
+    width: 30vw;
+    margin-left: 35vw;
+    margin-top: 5px;
+    background-image: url("../img/icons/search.png");
+    background-repeat: no-repeat;
+    background-size: 18px;
+    background-position: 3% 40%;
+}
+.searchInput:focus {
+    transform: scale(1.1);
 }

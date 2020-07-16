@@ -5,6 +5,7 @@
     $logo = 'logoRu';
     $style = 'footer';
     $styleTwo = 'style';
+    $styleThree = 'style';
 
     require_once 'public/components/header.php';
     
@@ -37,33 +38,98 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
         </pre>
         <?php
             require_once 'public/components/footer.php';

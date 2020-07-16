@@ -5,6 +5,7 @@
     $logo = 'logoRu';
     $style = 'style';
     $styleTwo = 'style';
+    $styleThree = 'style';
 
     require_once 'public/components/header.php';
     

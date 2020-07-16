@@ -1,0 +1,29 @@
+﻿#library {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 30px;
+}
+.book {
+    width: 130px;
+    height: 220px;
+    margin: 5px;
+    margin-bottom: 10px;
+    color: rgb(12, 77, 162);
+    transition-duration: 500ms;
+}
+.book:hover {
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
+    border-radius: 10px;
+}
+.bookImg {
+    width: 100%;
+}
+.bookDesc {
+    padding-top: 3px;
+    font-size: 0.8em;
+    text-align: center;
+    max-height: 2.5em;
+}

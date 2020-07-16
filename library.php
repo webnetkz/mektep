@@ -5,6 +5,7 @@
     $logo = 'logoRu';
     $style = 'searchBar';
     $styleTwo = 'footer';
+    $styleThree = 'library';
 
     require_once 'public/components/header.php';
     
@@ -14,44 +15,14 @@
         <?php
             require_once 'public/components/searchBar.php';
         ?>
-        <pre>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-        </pre>
+        <?php
+            require_once 'public/components/library.php';
+        ?>
         <?php
             require_once 'public/components/footer.php';
         ?>
     </section>
     
+
 </body>
 </html>

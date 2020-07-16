@@ -19,19 +19,21 @@ header {
     box-shadow: 0 0 10px rgb(0, 0, 0);
     align-items: center;
     transition-duration: 1600ms;
-    padding-left: 33px;
+    box-sizing: border-box;
 }
 .logoLink {
     border-radius: 12px;
+    position: relative;
+    left: 30px;
 }
 .logoHeader {
     height: 70px;
     padding: 7px;
 }
-menu {
+.menuHeader {
     display: flex;
     position: absolute;
-    right: 45px;
+    right: 50px;
 }
 .menuLink {
     text-decoration: none;
@@ -42,9 +44,13 @@ menu {
     padding-left: 40px;
     padding-left: 15px;
     font-size: 1.2em;
-    font-weight: 300;
+    font-weight: 500;
     text-transform: uppercase;
     text-decoration: none;
+    transition-duration: 500ms;
+}
+.menuItem:hover {
+    transform: scale(1.1);
 }
 #bgImg {
     position: fixed;
@@ -88,6 +94,7 @@ menu {
     text-align: center;
     font-weight: 300;
     font-size: 3.1em;
+    text-shadow: 0 0 5px rgb(13, 32, 56);
 }
 .linkBtn {
     position: relative;
@@ -108,4 +115,7 @@ menu {
     position: absolute;
     top: 120px;
     width: 100vw;
+    display: flex;
+	flex-direction: column;
+	min-height: calc(100% - 105px);
 }

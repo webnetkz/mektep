@@ -1,8 +1,35 @@
 ﻿footer {
-    position: absolute;
-    bottom: 0px;
+    display: flex;
+    align-items: center;
     height: 100px;
-    width: 150vw;
+    width: 100vw;
     background-color: rgb(64, 64, 64);
-    z-index: 99;
+    flex: 0 0 auto;
+    box-shadow: -5px 0 10px rgb(64, 64, 64);
+}
+.logoFooter {
+    position: relative;
+    left: calc(50vw - 60px);
+    height: 60px;
+    padding: 8px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 9px;
+}
+.menuFooter {
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+}
+.menuItemF {
+    color: rgb(146, 146, 146);
+    padding: 3px;
+    font-size: 0.9em;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition-duration: 500ms;
+}
+.menuItemF:hover {
+    color: rgb(255, 255, 255);
+    transform: rotateX(10deg);
 }
