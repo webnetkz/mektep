@@ -18,6 +18,9 @@
     transform: scale(1.05);
     border-radius: 10px;
 }
+.book:active {
+    transform: scale(0.5);
+}
 .bookImg {
     width: 100%;
 }
