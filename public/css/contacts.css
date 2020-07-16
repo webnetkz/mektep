@@ -1,15 +1,41 @@
 ﻿#contacts {
     min-height: 100vh;
 }
+.contacts {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 100px;
+}
 .logoContacts {
-    height: 140px;
+    width: 100px;
+}
+.contacts > div {
+    width: 100%;
+    padding: 25px;
 }
 .logoDiv {
     text-align: center;
+}
+.contactHeader {
+    text-align: center;
+    color: rgb(12, 77, 162);
+}
+hr {
+    border-color: rgb(12, 77, 162);
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+.contactP {
+    color: rgb(12, 77, 162);
+    padding-left: 20px;
+}
+.contactIcon {
+    float: left;
+    height: 32px;
+    margin-right: 8px;
 }
 .gMap {
     border-top: 5px solid rgb(12, 77, 162);
     clear: both;
     margin-bottom: -20px;
-    box-shadow: -10px 0 10px rgb(12, 77, 162);
 }
