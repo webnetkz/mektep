@@ -15,6 +15,14 @@
     background-color: rgb(255, 255, 255);
     border-radius: 9px;
 }
+.logoFooter:hover {
+    animation: rotateLogo 500ms linear;
+}
+@keyframes rotateLogo {
+    50% {
+        transform: rotateY(180deg);
+    }
+}
 .menuFooter {
     display: flex;
     flex-direction: column;

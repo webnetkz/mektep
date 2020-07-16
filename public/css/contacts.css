@@ -1,0 +1,15 @@
+﻿#contacts {
+    min-height: 100vh;
+}
+.logoContacts {
+    height: 140px;
+}
+.logoDiv {
+    text-align: center;
+}
+.gMap {
+    border-top: 5px solid rgb(12, 77, 162);
+    clear: both;
+    margin-bottom: -20px;
+    box-shadow: -10px 0 10px rgb(12, 77, 162);
+}

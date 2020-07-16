@@ -22,13 +22,22 @@ header {
     box-sizing: border-box;
 }
 .logoLink {
-    border-radius: 12px;
+    border-radius: 4px;
     position: relative;
     left: 30px;
+}
+.logoLink:hover {
+    animation: rotateLogo 500ms linear;
+}
+@keyframes rotateLogo {
+    50% {
+        transform: rotateY(180deg);
+    }
 }
 .logoHeader {
     height: 70px;
     padding: 7px;
+    transition-duration: 900ms;
 }
 .menuHeader {
     display: flex;

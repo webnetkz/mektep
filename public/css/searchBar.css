@@ -22,6 +22,11 @@
     outline: none;
     transition-duration: 600ms;
     color: rgb(12, 77, 162);
+    min-width: 120px;
+}
+.searchInp:hover {
+    cursor: pointer;
+    background-color: rgb(248, 251, 255);
 }
 .searchInp::placeholder {
     color: rgb(12, 77, 162);
