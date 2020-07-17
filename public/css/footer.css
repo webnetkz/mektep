@@ -3,9 +3,9 @@
     align-items: center;
     height: 100px;
     width: 100vw;
-    background-color: rgb(64, 64, 64);
+    background-color: rgb(55, 68, 85);
     flex: 0 0 auto;
-    box-shadow: -5px 0 10px rgb(64, 64, 64);
+    box-shadow: -5px 0 10px rgb(55, 68, 85);
 }
 .logoFooter {
     position: relative;
@@ -29,7 +29,7 @@
     margin-left: 40px;
 }
 .menuItemF {
-    color: rgb(146, 146, 146);
+    color: rgb(144, 162, 184);
     padding: 3px;
     font-size: 0.9em;
     font-weight: 500;
