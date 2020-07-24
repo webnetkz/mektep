@@ -39,7 +39,7 @@
         // Если приложение открыто на iOS и в браузере, то предлагаем установить
         if (isIos() && !isInStandaloneMode()) {
             //this.setState({ isShown: true }); // На примере React
-            console.log(isIos());
+            //console.log(isIos());
         }
 	</script>
 </body>

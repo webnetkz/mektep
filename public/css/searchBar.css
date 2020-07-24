@@ -50,3 +50,21 @@
 .searchInput:focus {
     transform: scale(1.1);
 }
+@media only screen and (max-width: 1000px) {
+
+    #searchBar {
+        height: 150px;
+        padding-top: 15px;
+    }
+    #searchForm {
+        flex-wrap: wrap;
+    }
+    .searchInp {
+        min-width: 45%;
+    }
+    .searchInput {
+        width: 70vw;
+        margin-left: 15vw;
+        margin-top: 25px;
+    }
+}

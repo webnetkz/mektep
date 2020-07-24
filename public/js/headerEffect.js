@@ -1,5 +1,8 @@
-﻿window.addEventListener('scroll', () => {
+﻿// Эффект при скроле страницы для header
+window.addEventListener('scroll', () => {
     if(pageYOffset > 50) {
+        let menuBurger = document.querySelector('.menuBurger').src = 'public/img/icons/menuWhite.png';
+        
         let headerBlock = document.querySelector('header');
         headerBlock.style.backgroundColor = 'rgb(12, 77, 162)';
         headerBlock.style.height = '50px';
@@ -15,6 +18,8 @@
             menuItem[i].style.color = 'rgb(255, 255, 255)';
         }
     } else {
+        let menuBurger = document.querySelector('.menuBurger').src = 'public/img/icons/menu.png';
+
         let headerBlock = document.querySelector('header');
         headerBlock.style.backgroundColor = 'rgb(255, 255, 255)';
         headerBlock.style.height = '100px';
@@ -32,3 +37,4 @@
         }
     }
 });
+

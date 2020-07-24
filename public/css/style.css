@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
 }
+.menuBurger {
+    display: none;
+}
 body {
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
@@ -127,4 +130,36 @@ header {
     display: flex;
 	flex-direction: column;
 	min-height: calc(100% - 105px);
+}
+@media only screen and (max-width: 1000px) {
+
+    .linkBtn {
+        position: relative;
+        top: 58vh;
+    }
+    .menuHeader {
+        right: 0px;
+        top: -110vh;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 1);
+        width: 100vw;
+        height: calc(100vh - 100px);
+        padding-top: 10vh;
+        z-index: 77;
+        transition-duration: 500ms;
+    }
+    .menuItem {
+        font-size: 1.4em;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .menuItem:last-child {
+        display: none;
+    }
+    .menuBurger {
+        display: block;
+        position: relative;
+        left: 60vw;
+        height: 50%;
+    }
 }

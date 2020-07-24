@@ -9,8 +9,8 @@ self.addEventListener('install', function(e) {
        '/public/json/manifest.json',
        '/public/img/logoKz.webp',
        '/public/img/logoRu.webp',
-       '/public/css/style.css'
-       //'/public/css/mStyle.css'
+       '/public/css/style.css',
+       '/public/js/headerEffect.js'
      ]);
    })
  );
