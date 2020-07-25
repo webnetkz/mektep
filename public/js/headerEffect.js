@@ -1,8 +1,8 @@
 ﻿// Эффект при скроле страницы для header
 window.addEventListener('scroll', () => {
     if(pageYOffset > 50) {
-        let menuBurger = document.querySelector('.menuBurger').src = 'public/img/icons/menuWhite.png';
-        
+        document.querySelector('.menuBurger').src = 'public/img/icons/menuWhite.png';
+
         let headerBlock = document.querySelector('header');
         headerBlock.style.backgroundColor = 'rgb(12, 77, 162)';
         headerBlock.style.height = '50px';
@@ -15,10 +15,12 @@ window.addEventListener('scroll', () => {
         logoHeader.style.padding = '4px';
 
         for(let i = 0; i < menuItem.length; i++) {
-            menuItem[i].style.color = 'rgb(255, 255, 255)';
+            if(window.innerWidth > 1000) {
+                menuItem[i].style.color = 'rgb(255, 255, 255)';
+            }  
         }
     } else {
-        let menuBurger = document.querySelector('.menuBurger').src = 'public/img/icons/menu.png';
+        document.querySelector('.menuBurger').src = 'public/img/icons/menu.png';
 
         let headerBlock = document.querySelector('header');
         headerBlock.style.backgroundColor = 'rgb(255, 255, 255)';
@@ -33,7 +35,9 @@ window.addEventListener('scroll', () => {
         logoHeader.style.padding = '7px';
 
         for(let i = 0; i < menuItem.length; i++) {
-            menuItem[i].style.color = 'rgb(12, 77, 162)';
+            if(window.innerWidth > 1000) {
+                menuItem[i].style.color = 'rgb(12, 77, 162)';
+            }  
         }
     }
 });

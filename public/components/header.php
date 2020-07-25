@@ -35,18 +35,39 @@
         </a>
         <img src="public/img/icons/menu.png" alt="burger menu" class="menuBurger">
         <menu class="menuHeader">
-            <a href="index" class="menuItem">
-                Главная
-            </a>
-            <a href="library" class="menuItem">
-                Библиотека
-            </a>
-            <a href="contacts" class="menuItem">
-                Контакты
-            </a>
-            <a href="#" class="menuItem">
-                Войти
-            </a>
+
+            <?php
+
+                if($lang == 'ru') {
+                    echo '<a href="index" class="menuItem">
+                        Главная
+                    </a>
+                    <a href="library" class="menuItem">
+                        Библиотека
+                    </a>
+                    <a href="contacts" class="menuItem">
+                        Контакты
+                    </a>
+                    <a href="#" class="menuItem">
+                        Войти
+                    </a>';
+                } else {
+                    echo '<a href="index" class="menuItem">
+                        Главная
+                    </a>
+                    <a href="library" class="menuItem">
+                        Кітапхана
+                    </a>
+                    <a href="contacts" class="menuItem">
+                        Контакты
+                    </a>
+                    <a href="#" class="menuItem">
+                        Войти
+                    </a>';
+                }
+
+            ?>
+
         </menu>
     </header>
     <script>
@@ -61,7 +82,7 @@
             } else {
                 menuBurger.name = 'showMenu';
                 let menuHeader = document.querySelector('.menuHeader');
-                menuHeader.style.top = '100px';
+                menuHeader.style.top = '50px';
             }
         }
     </script>
