@@ -42,10 +42,20 @@ header {
     padding: 7px;
     transition-duration: 900ms;
 }
+.language {
+    position: relative;
+    left: 50px;
+}
+.lang {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+}
 .menuHeader {
     display: flex;
     position: absolute;
     right: 50px;
+    font-size: 1.5em;
 }
 .menuLink {
     text-decoration: none;

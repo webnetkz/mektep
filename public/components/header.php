@@ -34,6 +34,10 @@
             <img src="public/img/<?=$logo?>.webp" alt="логотип издательства Мектеп" class="logoHeader">
         </a>
         <img src="public/img/icons/menu.png" alt="burger menu" class="menuBurger">
+        <div class="language">
+            <span class="lang" onclick="location.href = '?lang=kz'">kz</span>
+            <span class="lang" onclick="location.href = '?lang=ru'">ru</span>
+        </div>
         <menu class="menuHeader">
 
             <?php

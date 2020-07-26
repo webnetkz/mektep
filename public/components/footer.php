@@ -14,6 +14,10 @@
             Войти
         </a>
     </menu>
+    <div class="language">
+        <span class="lang" onclick="location.href = '?lang=kz'">kz</span>
+        <span class="lang" onclick="location.href = '?lang=ru'">ru</span>
+    </div>
     
 </footer>
 <script src="public/js/headerEffect.js"></script>
