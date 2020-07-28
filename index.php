@@ -18,18 +18,18 @@
     <div id="bgImg"></div>
         <?php
 
-            if($lang == 'ru') {
-                echo '<h1 class="indexHeader">Издательство Мектеп</h1>
+if($lang == 'ru') {
+    echo '<h1 class="indexHeader">Издательство Мектеп</h1>
                 <div style="text-align: center;">
-                    <a href="library" class="linkBtn">Библиотека</a>
+                <a href="library" class="linkBtn">Библиотека</a>
                 </div>';
             } else {
                 echo '<h1 class="indexHeader">Издательство Мектеп</h1>
                 <div style="text-align: center;">
-                    <a href="library" class="linkBtn">Кітапхана</a>
+                <a href="library" class="linkBtn">Кітапхана</a>
                 </div>';
             }
-        ?>
+            ?>
     <script>
         // Регистрация сервисного работника
         if ('serviceWorker' in navigator) {

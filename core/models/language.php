@@ -1,7 +1,7 @@
 ﻿<?php
 
-    $lang = 'ru';
-    $logo = 'logoRu';
+    $lang = 'kz';
+    $logo = 'logoKz';
 
     if( isset($_GET['lang']) && ($_GET['lang'] == 'kz' || $_GET['lang' == 'ru']) ) {
         
