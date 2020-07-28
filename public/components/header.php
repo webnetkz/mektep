@@ -1,5 +1,7 @@
 <?php
 
+    @session_start();
+
     require_once 'core/models/language.php';
 
 ?>
@@ -35,8 +37,17 @@
         </a>
         <img src="public/img/icons/menu.png" alt="burger menu" class="menuBurger">
         <div class="language">
-            <span class="lang" onclick="location.href = '?lang=kz'">kz</span>
-            <span class="lang" onclick="location.href = '?lang=ru'">ru</span>
+            <span class="lang" onclick="location.href = '?lang=<?=$newLang?>'">
+                    <?php
+
+                        if($_SESSION['lang'] == 'kz') {
+                            echo 'қаз';
+                        } else {
+                            echo 'рус';
+                        }
+					
+                    ?>
+                    </span>
         </div>
         <menu class="menuHeader">
 

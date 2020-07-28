@@ -1,8 +1,6 @@
 ﻿<?php
 
-    $title = 'Библиотека Мектеп';
-    $lang = 'ru';
-    $logo = 'logoRu';
+
     $style = 'searchBar';
     $styleTwo = 'footer';
     $styleThree = 'library';

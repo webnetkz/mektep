@@ -1,8 +1,5 @@
 ﻿<?php
 
-    $title = 'Контакты Мектеп';
-    $lang = 'ru';
-    $logo = 'logoRu';
     $style = 'footer';
     $styleTwo = 'contacts';
     $styleThree = 'style';

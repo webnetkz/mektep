@@ -1,15 +1,25 @@
 ﻿<?php
 
-    $lang = 'kz';
-    $logo = 'logoKz';
+    if( isset($_SESSION['lang']) ) {
 
-    if( isset($_GET['lang']) && ($_GET['lang'] == 'kz' || $_GET['lang' == 'ru']) ) {
-        
-        $lang = trim($_GET['lang']);
-        
-        if($_GET['lang'] == 'ru') {
-            $logo = 'logoRu';
-        } else {
-            $logo = 'logoKz';
-        }
+        // Подключение файла всех данных для языка
+        switch( $_SESSION['lang'] ) {
+            case 'ru':
+                require_once 'public/langs/ru.php';
+                break;
+            case 'kz':
+                require_once 'public/langs/kz.php';
+                break;
+        } 
+    } else {
+        $_SESSION['lang'] = 'kz';
+        require_once 'public/langs/kz.php';
     }
+
+	// Если пользователь сменил язык
+	if( isset($_GET['lang']) ) {
+        $_SESSION['lang'] = trim($_GET['lang']);
+	}
+
+
+?>

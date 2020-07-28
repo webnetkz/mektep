@@ -1,14 +1,10 @@
 <?php
 
-    $title = 'Издательство Мектеп';
-    $lang = 'ru';
-    $logo = 'logoRu';
     $style = 'style';
     $styleTwo = 'style';
     $styleThree = 'style';
-
     require_once 'public/components/header.php';
-    
+
 ?>
     <style>
         body {
@@ -18,18 +14,18 @@
     <div id="bgImg"></div>
         <?php
 
-if($lang == 'ru') {
-    echo '<h1 class="indexHeader">Издательство Мектеп</h1>
-                <div style="text-align: center;">
-                <a href="library" class="linkBtn">Библиотека</a>
-                </div>';
-            } else {
+            if($lang == 'ru') {
                 echo '<h1 class="indexHeader">Издательство Мектеп</h1>
-                <div style="text-align: center;">
-                <a href="library" class="linkBtn">Кітапхана</a>
-                </div>';
-            }
-            ?>
+                            <div style="text-align: center;">
+                            <a href="library" class="linkBtn">Библиотека</a>
+                            </div>';
+                        } else {
+                            echo '<h1 class="indexHeader">Издательство Мектеп</h1>
+                            <div style="text-align: center;">
+                            <a href="library" class="linkBtn">Кітапхана</a>
+                            </div>';
+                        }
+        ?>
     <script>
         // Регистрация сервисного работника
         if ('serviceWorker' in navigator) {
