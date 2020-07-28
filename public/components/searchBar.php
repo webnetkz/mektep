@@ -59,11 +59,11 @@
         </select>
         <select name="" class="searchInp">
             <option selected disabled>Пакет</option>
-            <option value="Чебурашка">Учителю</option>
-            <option value="Чебурашка">Ученику</option>
+            <option value="Чебурашка"><?=$toTeacher?></option>
+            <option value="Чебурашка"><?=$toApprentice?></option>
         </select>
         <select name="" class="searchInp">
-            <option selected disabled>Язык</option>
+            <option selected disabled><?=$language?></option>
             <option value="Казахский">Казахский</option>
             <option value="Русский">Русский</option>
         </select>

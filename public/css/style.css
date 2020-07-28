@@ -44,12 +44,13 @@ header {
 }
 .language {
     position: relative;
-    left: 50px;
+    left: 30px;
 }
 .lang {
     padding: 10px;
     border-radius: 5px;
     background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 5px rgb(12, 77, 162);
 }
 .menuHeader {
     display: flex;
@@ -143,13 +144,16 @@ header {
 }
 @media only screen and (max-width: 1000px) {
 
+    header {
+        z-index: 999;
+    }
     .linkBtn {
         position: relative;
         top: 58vh;
     }
     .menuHeader {
         right: 0px;
-        top: -110vh;
+        top: -140vh;
         flex-direction: column;
         background-color: rgba(255, 255, 255, 1);
         width: 100vw;
@@ -172,5 +176,6 @@ header {
         position: relative;
         left: 60vw;
         height: 50%;
+        z-index: 999;
     }
 }

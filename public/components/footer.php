@@ -15,8 +15,17 @@
         </a>
     </menu>
     <div class="language">
-        <span class="lang" onclick="location.href = '?lang=kz'">kz</span>
-        <span class="lang" onclick="location.href = '?lang=ru'">ru</span>
+        <span class="lang" onclick="location.href = '?lang=<?=$newLang?>'">
+            <?php
+
+                if($_SESSION['lang'] == 'kz') {
+                    echo 'қаз';
+                } else {
+                    echo 'рус';
+                }
+					
+            ?>
+        </span>
     </div>
     
 </footer>

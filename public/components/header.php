@@ -38,16 +38,16 @@
         <img src="public/img/icons/menu.png" alt="burger menu" class="menuBurger">
         <div class="language">
             <span class="lang" onclick="location.href = '?lang=<?=$newLang?>'">
-                    <?php
+                <?php
 
-                        if($_SESSION['lang'] == 'kz') {
-                            echo 'қаз';
-                        } else {
-                            echo 'рус';
-                        }
+                    if($_SESSION['lang'] == 'kz') {
+                        echo 'рус';
+                    } else {
+                        echo 'қаз';
+                    }
 					
-                    ?>
-                    </span>
+                ?>
+            </span>
         </div>
         <menu class="menuHeader">
 
@@ -93,7 +93,7 @@
             if(menuBurger.name == 'showMenu') {
                 menuBurger.name = 'hideMenu';
                 let menuHeader = document.querySelector('.menuHeader');
-                menuHeader.style.top = '-110vh';
+                menuHeader.style.top = '-140vh';
             } else {
                 menuBurger.name = 'showMenu';
                 let menuHeader = document.querySelector('.menuHeader');
