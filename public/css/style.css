@@ -44,7 +44,12 @@ header {
 }
 .language {
     position: relative;
-    left: 30px;
+    left: 50px;
+    transition-duration: 300ms;
+}
+.menuItem:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
 .lang {
     padding: 10px;
@@ -74,6 +79,7 @@ header {
 }
 .menuItem:hover {
     transform: scale(1.1);
+    cursor: pointer;
 }
 #bgImg {
     position: fixed;
@@ -177,5 +183,8 @@ header {
         left: 60vw;
         height: 50%;
         z-index: 999;
+    }
+    .language {
+        left: 35px;
     }
 }

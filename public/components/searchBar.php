@@ -1,13 +1,7 @@
 ﻿<section id="searchBar">
     <form action="#" method="GET" id="searchForm">
         <select name="" class="searchInp">
-            <?php
-                if($lang == 'ru') {
-                    echo '<option selected disabled>Класс</option>';
-                } else {
-                    echo '<option selected disabled>Сынып</option>';
-                }
-            ?>
+            <option selected disabled><?=$class?></option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>

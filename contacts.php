@@ -1,4 +1,9 @@
-﻿<?php
+﻿<style>
+    .menuItem:last-child {
+       display: none;
+    }
+</style>
+<?php
 
     $style = 'footer';
     $styleTwo = 'contacts';
@@ -7,6 +12,7 @@
     require_once 'public/components/header.php';
     
 ?>
+
     <section id="content">
         <?php
             require_once 'public/components/contacts.php';

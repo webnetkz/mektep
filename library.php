@@ -1,4 +1,9 @@
-﻿<?php
+﻿<style>
+    .menuItem:last-child {
+       display: none;
+    }
+</style>
+<?php
 
 
     $style = 'searchBar';

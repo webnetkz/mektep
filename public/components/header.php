@@ -3,6 +3,7 @@
     @session_start();
 
     require_once 'core/models/language.php';
+    require_once 'public/components/signModal.php';
 
 ?>
 <!DOCTYPE html>
@@ -50,38 +51,18 @@
             </span>
         </div>
         <menu class="menuHeader">
-
-            <?php
-
-                if($lang == 'ru') {
-                    echo '<a href="index" class="menuItem">
-                        Главная
-                    </a>
-                    <a href="library" class="menuItem">
-                        Библиотека
-                    </a>
-                    <a href="contacts" class="menuItem">
-                        Контакты
-                    </a>
-                    <a href="#" class="menuItem">
-                        Войти
-                    </a>';
-                } else {
-                    echo '<a href="index" class="menuItem">
-                        Главная
-                    </a>
-                    <a href="library" class="menuItem">
-                        Кітапхана
-                    </a>
-                    <a href="contacts" class="menuItem">
-                        Контакты
-                    </a>
-                    <a href="#" class="menuItem">
-                        Войти
-                    </a>';
-                }
-
-            ?>
+            <a href="index" class="menuItem">
+                <?=$home?>
+            </a>
+            <a href="library" class="menuItem">
+                <?=$lib?>
+            </a>
+            <a href="contacts" class="menuItem">
+                <?=$contacts?>
+            </a>
+            <span onclick="getSignModal()" class="menuItem">
+                <?=$door?>
+            </span>
 
         </menu>
     </header>
