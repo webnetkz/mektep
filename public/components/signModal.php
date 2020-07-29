@@ -1,5 +1,5 @@
 ﻿<div class="signModal">
-    <form action="admin/" method="POST">
+    <form action="core/libs/sign/signIn" method="POST">
         <input type="text" class="signInp sing" name="login" placeholder="Логин" autocomplete="off" required>
         <input type="password" class="signInp sing" name="pass" placeholder="Пароль" autocomplete="off" required>
         <input type="submit" class="signBtn sing" name="sign" value="Войти">
