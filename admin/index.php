@@ -19,10 +19,12 @@
 <body>
     <header>
         <span class="step activeStep" id="step1" onclick="focusTab(this)">Панель</span>
-        <span class="step" id="step2" onclick="focusTab(this)">Данные</span>
+        <!--
+                    <span class="step" id="step2" onclick="focusTab(this)">Данные</span>
         <span class="step" id="step3" onclick="focusTab(this)">Содержание</span>
         <span class="step" id="step4" onclick="focusTab(this)">Контент</span>
         <span class="step" id="step5" onclick="focusTab(this)">Тесты</span>
+-->
     </header>
     <section id="#content">
         <div class="content showContent step1">
@@ -55,7 +57,7 @@
 <script>
     // Tabs
     function focusTab(elem) {
-        console.log(elem.id);
+
         // Находим активную вкладку и дизактивируем
         let activeTab = document.querySelector('.activeStep');
         if(activeTab) {
