@@ -19,6 +19,7 @@ header {
     flex-wrap: nowrap;
     justify-content: space-around;
     align-items: center;
+    z-index: 9999;
 }
 .step {
     color: rgb(255, 255, 255);
@@ -45,7 +46,7 @@ header {
     width: 100vw;
     padding: 30px;
 }
-#content1, #content2, #content3, #content4, #content5 {
+.step1, .step2, .step3, .step4, .step5 {
     position: absolute;
     top: 70px;
     padding: 30px;

@@ -18,24 +18,44 @@
 </head>
 <body>
     <header>
-        <span class="step activeStep" name="step1" onclick="focusTab(this)">Панель</span>
-        <span class="step" name="step2" onclick="focusTab(this)">Этап 1</span>
-        <span class="step" name="step3" onclick="focusTab(this)">Этап 2</span>
-        <span class="step" name="step4" onclick="focusTab(this)">Этап 3</span>
-        <span class="step" name="step5" onclick="focusTab(this)">Этап 4</span>
+        <span class="step activeStep" id="step1" onclick="focusTab(this)">Панель</span>
+        <span class="step" id="step2" onclick="focusTab(this)">Данные</span>
+        <span class="step" id="step3" onclick="focusTab(this)">Содержание</span>
+        <span class="step" id="step4" onclick="focusTab(this)">Контент</span>
+        <span class="step" id="step5" onclick="focusTab(this)">Тесты</span>
     </header>
     <section id="#content">
-        <div class="content showContent" id="step1">tabContent1</div>
-        <div class="content" id="step2">tabContent2</div>
-        <div class="content" id="step3">tabContent3</div>
-        <div class="content" id="step4">tabContent4</div>
-        <div class="content" id="step5">tabContent5</div>
+        <div class="content showContent step1">
+            <?php
+                require_once 'pages/step1.php';
+            ?>
+        </div>
+        <div class="content step2">
+            <?php
+                require_once 'pages/step2.php';
+            ?>
+        </div>
+        <div class="content step3">
+            <?php
+                require_once 'pages/step3.php';
+            ?>
+            </div>
+        <div class="content step4">
+            <?php
+                require_once 'pages/step4.php';
+            ?>
+        </div>
+        <div class="content step5">
+            <?php
+                require_once 'pages/step5.php';
+            ?>
+        </div>
     </section>
 
 <script>
     // Tabs
     function focusTab(elem) {
-        console.log(elem);
+        console.log(elem.id);
         // Находим активную вкладку и дизактивируем
         let activeTab = document.querySelector('.activeStep');
         if(activeTab) {
@@ -54,7 +74,7 @@
         }
 
         // Отображаем контент активной вкладки
-        let tabContent = document.getElementById(elem.name);
+        let tabContent = document.querySelector('.'+elem.id);
         tabContent.classList.add('showContent');
     }
 </script>
