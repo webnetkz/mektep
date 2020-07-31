@@ -1,8 +1,7 @@
 ﻿<?php
 
 ?>
-<form action="#">
-    <select name="class" id="class" class="sel">
+    <select name="level" id="level" class="sel">
         <option value="" disabled selected>Класс</option>
         <option value="1">1</option>
         <option value="2">2</option>
@@ -17,7 +16,7 @@
         <option value="11">11</option>
     </select>
     <br>
-    <select name="book" id="book" class="sel">
+    <select name="subject" id="subject" class="sel">
         <option value="" disabled selected>Предмет</option>
         <option value="Алгебра">Алгебра</option>
         <option value="Әдебиеттік оқ">Әдебиеттік оқу</option>
@@ -54,5 +53,35 @@
         <option value="user">Для ученика</option>
     </select>
     <br>
-    <input type="submit" class="btn">
-</form>
+    <input type="submit" class="btn" value="Сохранить" onclick="createBook()" name="saveBook">
+<script>
+    // Создание книги
+function createBook() {
+    let xhr = new XMLHttpRequest();
+
+    let invoice = document.querySelector('[name=]');
+    let content = document.querySelector('.container');
+
+
+    xhr.open('GET', '/app/querys/getAllDocs.php');
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+    xhr.onreadystatechange = function() {
+        if(xhr.readyState === 4 && xhr.status === 200) {
+
+            let resultQuery = xhr.responseText;
+            // Разбить строку, разделителем ',' на элементы массива
+            resultQuery = resultQuery.split(',');
+            component.innerHTML += '<h2>Счета на оплату</h2><p class="docItem" style="border-radius: 5px; background: rgb(77, 77, 77);"><span class="docTableItem">Номер</span><span class="docTableItem">Дата</span><span class="docTableItem">Контрагент</span></p>';
+            for(let i = 0; i < resultQuery.length && i != resultQuery.length -1; i++) {
+                component.innerHTML += '<a href="app/layoutsOfDocs/invoice.php?doc='+(i+1)+'" class="docItemLink"><p class="docItem">'+resultQuery[i]+'</p></a>';
+            }
+        }
+    }
+    xhr.send();
+}
+
+getAllInvoice();
+getAllAct();
+getAllwaybill();
+</script>
