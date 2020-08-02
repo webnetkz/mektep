@@ -10,9 +10,6 @@
         <a href="contacts" class="menuItemF">
             <?=$contacts?>
         </a>
-        <a href="#" class="menuItemF">
-            <?=$door?>
-        </a>
     </menu>
     <div class="language">
             <span class="lang" onclick="location.href = '?lang=<?=$newLang?>'">

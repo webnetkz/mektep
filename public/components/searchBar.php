@@ -1,6 +1,6 @@
 ﻿<section id="searchBar">
     <form action="#" method="GET" id="searchForm">
-        <select name="" class="searchInp">
+        <select name="lavel" class="searchInp" onchange="filter(this)">
             <option selected disabled><?=$class?></option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -14,52 +14,18 @@
             <option value="10">10</option>
             <option value="11">11</option>
         </select>
-        <select name="" class="searchInp">
-            <?php
-                if($lang == 'ru') {
-                    echo '<option selected disabled>Предмет</option>
-                    <option value="Биология">Биология</option>
-                    <option value="География">География</option>
-                    <option value="Геометрия">Геометрия</option>
-                    <option value="Информатика">Информатика</option>
-                    <option value="Математика">Математика</option>
-                    <option value="Музыка">Музыка</option>
-                    <option value="Познание мира">Познание мира</option>
-                    <option value="Русская литература">Русская литература</option>
-                    <option value="Физика">Физика</option>
-                    <option value="Художественный труд">Художественный труд</option>';
-                } else {
-                    echo '<option selected disabled>Пән</option>
-                    <option value="Алгебра">Алгебра</option>
-                    <option value="Әдебиеттік оқ">Әдебиеттік оқу</option>
-                    <option value="Бастауыш">Бастауыш</option>
-                    <option value="Биология">Биология</option>
-                    <option value="География">География</option>
-                    <option value="Геометрия">Геометрия</option>
-                    <option value="Дүниежүзі тарихы">Дүниежүзі тарихы</option>
-                    <option value="Дүниетану">Дүниетану</option>
-                    <option value="Жаратылыстану">Жаратылыстану</option>
-                    <option value="Информатика">Информатика</option>
-                    <option value="Көркем еңбек">Көркем еңбек</option>
-                    <option value="Қазақ әдебиеті">Қазақ әдебиеті</option>
-                    <option value="Қазақ тілі">Қазақ тілі</option>
-                    <option value="Қазақстан тарихы">Қазақстан тарихы</option>
-                    <option value="Математика">Математика</option>
-                    <option value="Музыка">Музыка</option>
-                    <option value="Сауат ашу">Сауат ашу</option>
-                    <option value="Физика">Физика</option>';
-                }
-            ?>
+        <select name="subject" class="searchInp" onchange="filter(this)">
+            <?=$subject?>
         </select>
-        <select name="" class="searchInp">
-            <option selected disabled>Пакет</option>
-            <option value="Чебурашка"><?=$toTeacher?></option>
-            <option value="Чебурашка"><?=$toApprentice?></option>
-        </select>
-        <select name="" class="searchInp">
+        <select name="lang" class="searchInp" onchange="filter(this)">
             <option selected disabled><?=$language?></option>
-            <option value="Казахский">Казахский</option>
-            <option value="Русский">Русский</option>
+            <option value="kaz">Казахский</option>
+            <option value="rus">Русский</option>
+        </select>
+        <select name="pack" class="searchInp" onchange="filter(this)">
+            <option selected disabled>Пакет</option>
+            <option value="t1"><?=$toTeacher?></option>
+            <option value="t2"><?=$toApprentice?></option>
         </select>
     </form>
     <form action="#" id="searchInputFrom">
