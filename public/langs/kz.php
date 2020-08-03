@@ -7,18 +7,19 @@
     $language = 'Тiл';
 
     // Index page
-    $indexHeader = 'Баспасшы Мектеп';
+    $indexHeader = 'Мектеп Баспасы';
 
     // Filter page
     $toTeacher = 'Муғалемғеарн арналған';
     $toApprentice = 'Окушиға арналған';
     $class = 'Сынып';
+    $search = 'Iсдеу';
     
     // Menu items
-    $home = 'ГлавнаяK';
+    $home = 'Бас меню';
     $lib = 'Кітапхана';
-    $contacts = 'КонтактыK';
-    $door = 'ВойтиK';
+    $contacts = 'Контакты';
+    $door = 'Кiру';
 
     // Subject
     $subject = '<option selected disabled>Пән</option>

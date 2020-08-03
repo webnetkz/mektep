@@ -30,6 +30,6 @@
     </form>
     <form action="#" id="searchInputFrom">
         <span class="searchIcon"></span>
-        <input type="text" class="searchInput searchInp" placeholder="Поиск">
+        <input type="text" class="searchInput searchInp" placeholder="<?=$search?>">
     </form>
 </section>
