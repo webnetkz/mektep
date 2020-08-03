@@ -16,4 +16,4 @@
     @fwrite($f, $resContent);
     fclose($f);
 
-    //echo '<script>location.href = "createIndex.php?book='.$book.'"</script>';
+    echo '<script>location.href = "../../createBook/complete?book='.$book.'"</script>';

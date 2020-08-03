@@ -14,7 +14,7 @@
         $res = $pdo->query($appendSql);
     
         if($res) {
-            echo '<script>location.href = "../../createBook/parts?book='.$book.'"</script>';
+            echo '<script>location.href = "../../createBook/text?book='.$book.'"</script>';
         }
     }
     

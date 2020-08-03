@@ -2,7 +2,7 @@
 
     require_once 'core/db/db.php';
 
-    $sql = 'SELECT * FROM books';
+    $sql = 'SELECT * FROM books WHERE status != 0';
     $res = $pdo->query($sql);
     $res = $res->fetchAll(PDO::FETCH_ASSOC);
 ?>

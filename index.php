@@ -19,6 +19,7 @@
         <img src="public/img/bgImg/11.webp" class="bgImg" id="bg5">
         <img src="public/img/bgImg/12.webp" class="bgImg" id="bg6">
     <div style="text-align: center;">
+        <h1 class="indexHeader"><?=$indexHeader?></h1>
         <a href="library" class="linkBtn"><?=$lib?></a>
     </div>
     <script>

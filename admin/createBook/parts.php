@@ -34,7 +34,6 @@
         <!--<span class="step" onclick="location.href = '../index'">Панель</span>-->
         <span class="step completeStep">Основное</span>
         <span class="step activeStep" onclick="location.href = 'parts?book=<?=$book?>'">Содержание</span>
-        <span class="step" onclick="location.href = 'text?book=<?=$book?>'">Текст</span>
     </header>
     <section id="content" style="display: flex;">
         <form enctype="multipart/form-data" name="formParts" action="../core/newBook/createParts" method="POST">

@@ -88,7 +88,7 @@
             <select name="part" class="inp">
                 <?php
                     foreach($res as $k => $v) {
-                        echo '<option value="'.$v['id'].'">'.$v['part'].'</option>';
+                        echo '<option value="'.$v['part'].'">'.$v['part'].'</option>';
                     }
                 ?>
             </select>
