@@ -10,7 +10,14 @@ self.addEventListener('install', function(e) {
        '/public/img/logoKz.webp',
        '/public/img/logoRu.webp',
        '/public/css/style.css',
-       '/public/js/headerEffect.js'
+       '/public/js/headerEffect.js',
+       '/public/img/bgImg/1.webp',
+       '/public/img/bgImg/3.webp',
+       '/public/img/bgImg/5.webp',
+       '/public/img/bgImg/6.webp',
+       '/public/img/bgImg/11.webp',
+       '/public/img/bgImg/12.webp',
+       '/public/img/bgImg/13.webp'
      ]);
    })
  );

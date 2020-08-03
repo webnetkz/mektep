@@ -9,6 +9,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    transition: background .15s linear;
 }
 header {
     display: flex;
@@ -81,39 +82,16 @@ header {
     transform: scale(1.1);
     cursor: pointer;
 }
-#bgImg {
+.bgImg {
     position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
     width: 100vw;
-    z-index: -1;
-    background-image: url('../img/bgImg/1.webp');
     background-size: cover;
-    animation: bgChange 35s infinite;
-}
-@keyframes bgChange {
-    0% {
-        background-image: url('../img/bgImg/1.webp');
-    }
-    20% {
-        background-image: url('../img/bgImg/3.webp');
-    }
-    30% {
-        background-image: url('../img/bgImg/5.webp');
-    }
-    45% {
-        background-image: url('../img/bgImg/6.webp');
-    }
-    60% {
-        background-image: url('../img/bgImg/13.webp');
-    }
-    75% {
-        background-image: url('../img/bgImg/12.webp');
-    }
-    90% {
-        background-image: url('../img/bgImg/11.webp');
-    }
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    transition-duration: 1000ms;
 }
 .indexHeader {
     position: absolute;
