@@ -5,7 +5,7 @@
     $host = 'localhost';
     $db_name = 'mektep';
     $db_user = 'root';
-    $db_pass = '';
+    $db_pass = 'root';
     $charset = 'utf8';
     $options = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
 
@@ -27,7 +27,7 @@
 
     /*
     $host = 'srv-pleskdb28.ps.kz:3306';
-    $db_name = 'webnetkz_express';
-    $db_user = 'webnetkz_e';
-    $db_pass = '!36Aksz1';
+    $db_name = 'webnetkz_mektep';
+    $db_user = 'webnetkz_m';
+    $db_pass = 'fepipe7611!!QQ';
     */

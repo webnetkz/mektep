@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
     if( !isset($_SESSION['lang']) ) {
         $_SESSION['lang'] = 'kz';

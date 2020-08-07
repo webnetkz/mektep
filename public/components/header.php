@@ -1,14 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
 <?php
 
     @session_start();
 
-    require_once 'core/models/language.php';
-    require_once 'public/components/signModal.php';
+    require_once('core/models/language.php');
 
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
     <meta charset="UTF-8">
     <meta name="author" content="WebNet">
     <meta name="description" content="<?=$title?>">
@@ -18,7 +17,7 @@
     <link rel="manifest" href="public/json/manifest.json">
     <!--------| START STYLES |-------->
         <link rel="stylesheet" href="public/css/style.css">
-        <link rel="icon" type="image/ico" href="/public/img/logoRu.ico">
+        <link rel="icon" type="image/ico" href="/public/img/logo.ico">
         <link rel="stylesheet" href="public/css/<?=$style?>.css">
         <link rel="stylesheet" href="public/css/<?=$styleTwo?>.css">
         <link rel="stylesheet" href="public/css/<?=$styleThree?>.css">
@@ -32,6 +31,9 @@
     </title>
 </head>
 <body>
+    <?php
+        require_once 'public/components/signModal.php';
+    ?>
     <header>
         <a href="index" class="logoLink">
             <img src="public/img/<?=$logo?>.webp" alt="логотип издательства Мектеп" class="logoHeader">
