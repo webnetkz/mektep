@@ -18,7 +18,7 @@
     <link rel="manifest" href="public/json/manifest.json">
     <!--------| START STYLES |-------->
         <link rel="stylesheet" href="public/css/style.css">
-        <link rel="icon" type="image/webp" href="/public/img/logoRu.webp">
+        <link rel="icon" type="image/ico" href="/public/img/logoRu.ico">
         <link rel="stylesheet" href="public/css/<?=$style?>.css">
         <link rel="stylesheet" href="public/css/<?=$styleTwo?>.css">
         <link rel="stylesheet" href="public/css/<?=$styleThree?>.css">
