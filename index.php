@@ -26,7 +26,7 @@
         case 'ru':
             $lang = 'ru';
             $logo = 'logoRu';
-            $tile = 'ru';
+            $title = 'ru';
             $newLang = 'kz';
             $language = 'Язык';
         
@@ -61,7 +61,7 @@
         case 'kz':
             $lang = 'kz';
             $logo = 'logoKz';
-            $tile = 'kz';
+            $title = 'kz';
             $newLang = 'ru';
             $language = 'Тiл';
         
@@ -186,13 +186,13 @@
             overflow: hidden;
         }
     </style>
-        <img src="public/img/bgImg/13.webp" class="bgImg" id="bg7">
-        <img src="public/img/bgImg/1.webp" class="bgImg" id="bg1">
-        <img src="public/img/bgImg/3.webp" class="bgImg" id="bg2">
-        <img src="public/img/bgImg/5.webp" class="bgImg" id="bg3">
-        <img src="public/img/bgImg/6.webp" class="bgImg" id="bg4">
-        <img src="public/img/bgImg/11.webp" class="bgImg" id="bg5">
-        <img src="public/img/bgImg/12.webp" class="bgImg" id="bg6">
+        <img src="public/img/bgImg/13.webp" class="bgImg" id="bg7" alt="bg images">
+        <img src="public/img/bgImg/1.webp" class="bgImg" id="bg1" alt="bg images">
+        <img src="public/img/bgImg/3.webp" class="bgImg" id="bg2" alt="bg images">
+        <img src="public/img/bgImg/5.webp" class="bgImg" id="bg3" alt="bg images">
+        <img src="public/img/bgImg/6.webp" class="bgImg" id="bg4" alt="bg images">
+        <img src="public/img/bgImg/11.webp" class="bgImg" id="bg5" alt="bg images">
+        <img src="public/img/bgImg/12.webp" class="bgImg" id="bg6" alt="bg images">
     <div style="text-align: center;">
         <h1 class="indexHeader"><?=$indexHeader?></h1>
         <a href="library" class="linkBtn"><?=$lib?></a>

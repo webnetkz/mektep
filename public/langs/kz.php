@@ -2,7 +2,7 @@
 
     $lang = 'kz';
     $logo = 'logoKz';
-    $tile = 'kz';
+    $title = 'kz';
     $newLang = 'ru';
     $language = 'Тiл';
 

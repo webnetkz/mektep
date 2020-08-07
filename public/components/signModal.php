@@ -1,21 +1,4 @@
-﻿<div class="signModal">
-    <form action="core/libs/sign/signIn" method="POST">
-        <input type="text" class="signInp sing" name="login" placeholder="Логин" autocomplete="off" required>
-        <input type="password" class="signInp sing" name="pass" placeholder="Пароль" autocomplete="off" required>
-        <input type="submit" class="signBtn sing" name="sign" value="Войти">
-    </form>
-</div>
-<script>
-    function getSignModal() {
-        let modalBtn = document.querySelector('.signModal');
-        if(modalBtn.style.top == '100px') {
-            modalBtn.style.top = '-200px';
-        } else {
-            modalBtn.style.top = '100px';
-        }
-    }
-</script>
-<style>
+﻿<style>
     .signModal {
         position: absolute;
         top: -200px;
@@ -50,3 +33,22 @@
         box-shadow: 0 0 10px rgb(50, 50, 50);
     }
 </style>
+<div class="signModal">
+    <form action="core/libs/sign/signIn" method="POST">
+        <label for="login" style="display: none;">login</label>
+        <input type="text" class="signInp sing" id="login" name="login" placeholder="Логин" autocomplete="off" required>
+        <label for="pass" style="display: none;">pass</label>
+        <input type="password" class="signInp sing" name="pass" placeholder="Пароль" autocomplete="off" required>
+        <input type="submit" class="signBtn sing" id="pass" name="sign" value="Войти">
+    </form>
+</div>
+<script>
+    function getSignModal() {
+        let modalBtn = document.querySelector('.signModal');
+        if(modalBtn.style.top == '100px') {
+            modalBtn.style.top = '-200px';
+        } else {
+            modalBtn.style.top = '100px';
+        }
+    }
+</script>
