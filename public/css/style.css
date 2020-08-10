@@ -143,7 +143,7 @@ header {
         width: 100vw;
         height: calc(100vh - 50px);
         padding-top: 100px;
-        z-index: -1;
+        z-index: 9999999;
         transition-duration: 500ms;
     }
     .menuItem {
@@ -160,7 +160,7 @@ header {
         position: relative;
         left: 60vw;
         height: 50%;
-        z-index: 999;
+        z-index: 999999999999999999999999999999999999999999999999999999999999999;
     }
     .language {
         left: 35px;

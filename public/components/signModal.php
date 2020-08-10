@@ -35,11 +35,13 @@
 </style>
 <div class="signModal">
     <form action="core/libs/sign/signIn" method="POST">
-        <label for="login" style="display: none;">login</label>
-        <input type="text" class="signInp sing" id="login" name="login" placeholder="Логин" autocomplete="off" required>
-        <label for="pass" style="display: none;">pass</label>
-        <input type="password" class="signInp sing" name="pass" placeholder="Пароль" autocomplete="off" required>
-        <input type="submit" class="signBtn sing" id="pass" name="sign" value="Войти">
+        <label for="login">
+            <input type="text" class="signInp sing" id="login" name="login" placeholder="Логин" autocomplete="off" required>
+        </label>
+        <label for="pass">
+            <input type="password" class="signInp sing" id="pass" name="pass" placeholder="Пароль" autocomplete="off" required>
+        </label>
+        <input type="submit" class="signBtn sing" name="sign" value="Войти">
     </form>
 </div>
 <script>
