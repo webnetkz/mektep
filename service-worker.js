@@ -17,7 +17,14 @@ self.addEventListener('install', function(e) {
        '/public/img/bgImg/6.webp',
        '/public/img/bgImg/11.webp',
        '/public/img/bgImg/12.webp',
-       '/public/img/bgImg/13.webp'
+       '/public/img/bgImg/13.webp',
+       '/public/img/miniBgImg/1.webp',
+       '/public/img/miniBgImg/3.webp',
+       '/public/img/miniBgImg/5.webp',
+       '/public/img/miniBgImg/6.webp',
+       '/public/img/miniBgImg/11.webp',
+       '/public/img/miniBgImg/12.webp',
+       '/public/img/miniBgImg/13.webp'
      ]);
    })
  );
