@@ -44,20 +44,6 @@
             $contacts = 'Контакты';
             $door = 'Войти';
             
-            // Subject
-            $subject = '<option selected disabled>Предмет</option>
-            <option value="Биология">Биология</option>
-            <option value="География">География</option>
-            <option value="Геометрия">Геометрия</option>
-            <option value="Информатика">Информатика</option>
-            <option value="Математика">Математика</option>
-            <option value="Музыка">Музыка</option>
-            <option value="Познание мира">Познание мира</option>
-            <option value="Русская литература">Русская литература</option>
-            <option value="Физика">Физика</option>
-            <option value="Художественный труд">Художественный труд</option>
-            <option value="Химия">Химия</option>';
-            break;
         case 'kz':
             $lang = 'kz';
             $logo = 'logoKz';
@@ -80,28 +66,6 @@
             $contacts = 'Контакты';
             $door = 'Кiру';
         
-            // Subject
-            $subject = '<option selected disabled>Пән</option>
-            <option value="Бастауыш">Бастауыш</option>
-            <option value="Биология">Биология</option>
-            <option value="География">География</option>
-            <option value="Геометрия">Геометрия</option>
-            <option value="Дүниежүзі тарихы">Дүниежүзі тарихы</option>
-            <option value="Дүниетану">Дүниетану</option>
-            <option value="Жаратылыстану">Жаратылыстану</option>
-            <option value="Информатика">Информатика</option>
-            <option value="Көркем еңбек">Көркем еңбек</option>
-            <option value="Қазақ әдебиеті">Қазақ әдебиеті</option>
-            <option value="Қазақ тілі">Қазақ тілі</option>
-            <option value="Қазақстан тарихы">Қазақстан тарихы</option>
-            <option value="Математика">Математика</option>
-            <option value="Музыка">Музыка</option>
-            <option value="Сауат ашу">Сауат ашу</option>
-            <option value="Әдебиеттік оқу">Әдебиеттік оқу</option>
-            <option value="Физика">Физика</option>
-            <option value="Алгебра">Алгебра</option>
-            <option value="Химия">Химия</option>';
-            break;
     }
 
 ?>
@@ -170,24 +134,7 @@
 
         </menu>
     </header>
-    <script>
-        // Отображение меню на мобильной версии
-        if(window.innerWidth <= 1000) {
-            let menuBurger = document.querySelector('.menuBurger');
-            menuBurger.onclick = () => {
-
-                if(menuBurger.name == 'showMenu') {
-                    menuBurger.name = 'hideMenu';
-                    let menuHeader = document.querySelector('.menuHeader');
-                    menuHeader.style.top = '-140vh';
-                } else {
-                    menuBurger.name = 'showMenu';
-                    let menuHeader = document.querySelector('.menuHeader');
-                    menuHeader.style.top = '50px';
-                }
-            }
-        }
-    </script>
+    <script src="public/js/mobile/menu.js"></script>
 
     <section id="content">
         <?php

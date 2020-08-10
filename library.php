@@ -135,9 +135,6 @@
         display: none;
         }
     </style>
-    <?php
-        require_once 'public/components/signModal.php';
-    ?>
     <header>
         <a href="index" class="logoLink">
             <img src="public/img/<?=$logo?>.webp" alt="логотип издательства Мектеп" class="logoHeader">
@@ -172,22 +169,7 @@
 
         </menu>
     </header>
-    <script>
-        // Отображение меню на мобильной версии
-        let menuBurger = document.querySelector('.menuBurger');
-        menuBurger.onclick = () => {
-
-            if(menuBurger.name == 'showMenu') {
-                menuBurger.name = 'hideMenu';
-                let menuHeader = document.querySelector('.menuHeader');
-                menuHeader.style.top = '-140vh';
-            } else {
-                menuBurger.name = 'showMenu';
-                let menuHeader = document.querySelector('.menuHeader');
-                menuHeader.style.top = '50px';
-            }
-        }
-    </script>
+    <script src="public/js/mobile/menu.js"></script>
 
     <section id="content">
         <?php

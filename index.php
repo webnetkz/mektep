@@ -128,6 +128,13 @@
     </title>
 </head>
 <body>
+    <script>
+        if(window.innerWidth <= 1000) {
+            document.body.innerHTML += '<img src="public/img/miniBgImg/13.webp" class="bgImg" id="bg7" alt="bg images"><img src="public/img/miniBgImg/1.webp" class="bgImg" id="bg1" alt="bg images"><img src="public/img/miniBgImg/3.webp" class="bgImg" id="bg2" alt="bg images"><img src="public/img/miniBgImg/5.webp" class="bgImg" id="bg3" alt="bg images"><img src="public/img/miniBgImg/6.webp" class="bgImg" id="bg4" alt="bg images"><img src="public/img/miniBgImg/11.webp" class="bgImg" id="bg5" alt="bg images"><img src="public/img/miniBgImg/12.webp" class="bgImg" id="bg6" alt="bg images">';
+        } else {
+            document.body.innerHTML += '<img src="public/img/bgImg/13.webp" class="bgImg" id="bg7" alt="bg images"><img src="public/img/bgImg/1.webp" class="bgImg" id="bg1" alt="bg images"><img src="public/img/bgImg/3.webp" class="bgImg" id="bg2" alt="bg images"><img src="public/img/bgImg/5.webp" class="bgImg" id="bg3" alt="bg images"><img src="public/img/bgImg/6.webp" class="bgImg" id="bg4" alt="bg images"><img src="public/img/bgImg/11.webp" class="bgImg" id="bg5" alt="bg images"><img src="public/img/bgImg/12.webp" class="bgImg" id="bg6" alt="bg images">';
+        }
+    </script>
     <?php
         require_once 'public/components/signModal.php';
     ?>
@@ -165,7 +172,7 @@
 
         </menu>
     </header>
-    <body>
+    <script src="public/js/mobile/menu.js"></script>
     <style>
         body {
             overflow: hidden;
@@ -186,6 +193,8 @@
         });}
     </script>
     <script>
+
+
         // Анимация смена фонового изображения
         setInterval(() => {
             let bgImg = document.querySelector('#bg6');
@@ -217,29 +226,6 @@
             let repeatBg = document.querySelector('#bg1');
             bgImg.style.opacity = "1";
         }, 40000);
-    </script>
-    <script>
-        // Отображение меню на мобильной версии
-        let menuBurger = document.querySelector('.menuBurger');
-        menuBurger.onclick = () => {
-
-            if(menuBurger.name == 'showMenu') {
-                menuBurger.name = 'hideMenu';
-                let menuHeader = document.querySelector('.menuHeader');
-                menuHeader.style.top = '-140vh';
-            } else {
-                menuBurger.name = 'showMenu';
-                let menuHeader = document.querySelector('.menuHeader');
-                menuHeader.style.top = '50px';
-            }
-        }
-    </script>
-    <script>
-        if(window.innerWidth <= 1000) {
-            document.body.innerHTML += '<img src="public/img/miniBgImg/13.webp" class="bgImg" id="bg7" alt="bg images"><img src="public/img/miniBgImg/1.webp" class="bgImg" id="bg1" alt="bg images"><img src="public/img/miniBgImg/3.webp" class="bgImg" id="bg2" alt="bg images"><img src="public/img/miniBgImg/5.webp" class="bgImg" id="bg3" alt="bg images"><img src="public/img/miniBgImg/6.webp" class="bgImg" id="bg4" alt="bg images"><img src="public/img/miniBgImg/11.webp" class="bgImg" id="bg5" alt="bg images"><img src="public/img/miniBgImg/12.webp" class="bgImg" id="bg6" alt="bg images">';
-        } else {
-            document.body.innerHTML += '<img src="public/img/bgImg/13.webp" class="bgImg" id="bg7" alt="bg images"><img src="public/img/bgImg/1.webp" class="bgImg" id="bg1" alt="bg images"><img src="public/img/bgImg/3.webp" class="bgImg" id="bg2" alt="bg images"><img src="public/img/bgImg/5.webp" class="bgImg" id="bg3" alt="bg images"><img src="public/img/bgImg/6.webp" class="bgImg" id="bg4" alt="bg images"><img src="public/img/bgImg/11.webp" class="bgImg" id="bg5" alt="bg images"><img src="public/img/bgImg/12.webp" class="bgImg" id="bg6" alt="bg images">';
-        }
     </script>
 </body>
 </html>

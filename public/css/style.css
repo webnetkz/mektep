@@ -92,6 +92,7 @@ header {
     background-repeat: no-repeat;
     background-position: 50% 50%;
     transition-duration: 1000ms;
+    z-index: -1;
 }
 .indexHeader {
     position: absolute;
@@ -143,7 +144,7 @@ header {
         width: 100vw;
         height: calc(100vh - 50px);
         padding-top: 100px;
-        z-index: 9999999;
+        z-index: 999;
         transition-duration: 500ms;
     }
     .menuItem {
@@ -160,7 +161,7 @@ header {
         position: relative;
         left: 60vw;
         height: 50%;
-        z-index: 999999999999999999999999999999999999999999999999999999999999999;
+        z-index: 9999;
     }
     .language {
         left: 35px;
