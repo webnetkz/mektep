@@ -33,11 +33,6 @@
             // Index page
             $indexHeader = 'Издательство Мектеп';
         
-            // Filter page
-            $toTeacher = 'Для учителя';
-            $toApprentice = 'Для ученика';
-            $class = 'Класс';
-        
             // Menu items
             $home = 'Главная';
             $lib = 'Библиотека';
@@ -53,12 +48,6 @@
         
             // Index page
             $indexHeader = 'Мектеп Баспасы';
-        
-            // Filter page
-            $toTeacher = 'Муғалемғеарн арналған';
-            $toApprentice = 'Окушиға арналған';
-            $class = 'Сынып';
-            $search = 'Iсдеу';
             
             // Menu items
             $home = 'Бас меню';

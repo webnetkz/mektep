@@ -96,4 +96,6 @@
     $f = fopen('../../../books/'.$book.'/index.html', 'a');
     @fwrite($f, $con);
     fclose($f);
+
+    echo '<script>location.href = "../../../books/'.$book.'/index.html"</script>';
 ?>

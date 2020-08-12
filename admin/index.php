@@ -2,7 +2,7 @@
 
     @session_start();
 
-    if( !isset($_SESSION['login']) ) {
+    if( empty($_SESSION['login']) ) {
         echo '<script>location.href = "../index"</script>';
     }
 
@@ -21,9 +21,13 @@
         <span class="step activeStep">Панель</span>
     </header>
     <section id="content">
-        <button class="btn" onclick="location.href = 'createBook/'">Создать книгу</button>
+        <button class="btn" onclick="location.href = 'createBook/index'">Создать книгу</button>
         <br>
         <button class="btn">Редактировать книгу</button>
+        <?php
+
+var_dump($_SESSION);
+?>
     </section>
 </body>
 </html>
