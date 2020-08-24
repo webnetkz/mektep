@@ -26,7 +26,7 @@
         require_once '../../public/components/loading.php';
     ?>
     <section id="content">
-        <form enctype="multipart/form-data" action="../core/newBook/createBook/index" method="POST">
+        <form enctype="multipart/form-data" action="../core/newBook/createBook" method="POST">
             <select name="level" id="level" class="inp" required>
                 <option value="" disabled selected>Класс</option>
                 <option value="1">1</option>
@@ -82,7 +82,7 @@
             <br>
             <input type="file" class="inp" name="titleImg" accept=".webp" required>
             <br>
-            <input type="submit" class="btn" value="Сохранить" name="saveBook" onclick="loading()">
+            <input type="submit" class="btn" value="Сохранить" name="saveBook" onclick="load()">
         </form>
     </section>
     <script>

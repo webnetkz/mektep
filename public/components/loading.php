@@ -7,6 +7,7 @@
         width: 100vw;
         height: 100vh;
         background: rgba(255, 255, 255, 0.8);
+        z-index: 9999999999999999999999999999;
     }
     .loadElement {
         position: fixed;
@@ -19,6 +20,7 @@
         box-sizing: border-box;
         transition-duration: 500ms;
         animation: pulse 1s infinite;
+        z-index: 99999999999999999999999999999;
     }
     @keyframes pulse {
         50% {
