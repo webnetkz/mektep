@@ -21,9 +21,12 @@
     <header>
         <p style="position: fixed; left: 25vw; color: white;">Создать книгу</p>
     </header>
-    <?php require_once '../public/components/header.php'; ?>
+    <?php 
+        require_once '../public/components/header.php';
+        require_once '../../public/components/loading.php';
+    ?>
     <section id="content">
-        <form enctype="multipart/form-data" action="../core/newBook/createBook" method="POST">
+        <form enctype="multipart/form-data" action="../core/newBook/createBook/index" method="POST">
             <select name="level" id="level" class="inp" required>
                 <option value="" disabled selected>Класс</option>
                 <option value="1">1</option>
@@ -79,8 +82,14 @@
             <br>
             <input type="file" class="inp" name="titleImg" accept=".webp" required>
             <br>
-            <input type="submit" class="btn" value="Сохранить" name="saveBook">
+            <input type="submit" class="btn" value="Сохранить" name="saveBook" onclick="loading()">
         </form>
     </section>
+    <script>
+        function load() {
+            let loading = document.querySelector('.loading');
+            loading.style.display = 'block';
+        }
+    </script>
 </body>
 </html>
