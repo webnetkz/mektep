@@ -28,8 +28,9 @@
             <option value="t2"><?=$toApprentice?></option>
         </select>
     </form>
-    <form action="#" id="searchInputFrom">
+    <form id="searchInputFrom">
         <span class="searchIcon"></span>
-        <input type="text" class="searchInput searchInp" placeholder="<?=$search?>">
+        <input type="text" class="searchInput searchInp" placeholder="" id="findInp" onchange="searchFilter(this)">
+        <button class="searchBtn" onclick="findFun()" type="submit"><?=$search?></button>
     </form>
 </section>

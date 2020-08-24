@@ -6,19 +6,24 @@
     $book = trim($_POST['book']);
 
     if( isset($_POST['part']) ) {
-        $part = trim($_POST['part']);
-        $content = trim($_POST['content']);
-        $content = '<div style="margin-top: 4em;" id="'.$part.'">'.$content.'</div>';
-        $content = htmlentities($content);
 
-        $sql = 'CREATE TABLE IF NOT EXISTS book_'.$book.'(id INT NOT NULL AUTO_INCREMENT, part VARCHAR (255) NOT NULL, content LONGTEXT NOT NULL, PRIMARY KEY (ID) )';
-        $pdo->query($sql);
+        $part = trim($_POST['part']);
+
+        // Получение id главы
+        $sqlGetPartId = 'SELECT id FROM parts_'.$book.' WHERE part = "'.$part.'"';
+        $res = $pdo->query($sqlGetPartId);
+        $part = $res->fetch(PDO::FETCH_ASSOC);
+        $part = $part['id'];
+
+        $content = trim($_POST['content']);
+        $content = '<div style="margin-top: 4em; box-shadow: 0 0 10px rgb(100, 100, 100); padding: 30px;" id="'.$part.'">'.$content.'</div>';
+        $content = htmlentities($content);
 
         $appendSql = 'INSERT INTO book_'.$book.'(`part`, `content`) VALUES ("'.$part.'", "'.$content.'")';
         $res = $pdo->query($appendSql);
 
         if($res) {
-            echo '<script>location.href = "createIndex?book='.$book.'"</script>';
+            echo '<script>location.href = "../../createBook/text?book='.$book.'"</script>';
         }
     }
     

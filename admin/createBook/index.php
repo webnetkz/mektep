@@ -2,6 +2,8 @@
 
     @session_start();
 
+    $_SESSION['login'] = true;
+
     if( !isset($_SESSION['login']) ) {
         echo '<script>location.href = "../../index"</script>';
     }
@@ -17,9 +19,9 @@
 </head>
 <body>
     <header>
-        <span class="step" onclick="location.href = '../index'">Панель</span>
-        <span class="step activeStep">Основное</span>
+        <p style="position: fixed; left: 25vw; color: white;">Создать книгу</p>
     </header>
+    <?php require_once '../public/components/header.php'; ?>
     <section id="content">
         <form enctype="multipart/form-data" action="../core/newBook/createBook" method="POST">
             <select name="level" id="level" class="inp" required>

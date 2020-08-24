@@ -2,6 +2,8 @@
 
     @session_start();
 
+    $_SESSION['login'] = 1;
+
     if( !isset($_SESSION['login']) ) {
         echo '<script>location.href = "../../index"</script>';
     }
@@ -28,29 +30,30 @@
 </head>
 <body>
     <header>
-        <!--<span class="step" onclick="location.href = '../index'">Панель</span>-->
-        <span class="step completeStep">Основное</span>
-        <span class="step completeStep" onclick="location.href = 'parts?book=<?=$book?>'">Содержание</span>
-        <span class="step completeStep" onclick="location.href = 'text?book=<?=$book?>'">Текст</span>
-        <span class="step activeStep" onclick="location.href = 'test?book=<?=$book?>'">Тесты</span>
+        <p style="position: fixed; left: 25vw; color: white;">Создание книги, тесты</p>
     </header>
+    <?php require_once '../public/components/header.php'; ?>
     <section id="content">
-
-        <form enctype="multipart/form-data" name="formParts" action="../core/newBook/createParts" method="POST">
-            <select name="part" class="inp" onchange="appendEditor()">
-                <?php
-                    foreach($res as $k => $v) {
-                        echo '<option value="'.$v['id'].'">'.$v['part'].'</option>';
-                    }
-                ?>
-            </select>
-            <input type="submit" value="Сохранить" name="saveText" class="btn">
-        </form>
-
+            <p>
+                <a href="tests/1?book=<?=$book?>">Тест с одним вариантом ответа</a>
+            </p>
+                <br>
+            <p>
+                <a href="tests/2?book=<?=$book?>">Тест с несколькими вариантами ответов</a>
+            </p>
+                <br>
+            <p>
+                <a href="tests/2?book=<?=$book?>">Тест с вставкой слова</a>
+            </p>
+                <br>
+                <p>
+                <a href="tests/2?book=<?=$book?>">Тест с перетягиванием</a>
+            </p>
+                <br>
+                <p>
+                <a href="tests/2?book=<?=$book?>">Тест с картинками</a>
+            </p>
     </section>
 
-    <script>
-        let content = document.querySelector('.ql-editor');
-    </script>
 </body>
 </html>

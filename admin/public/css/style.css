@@ -6,30 +6,72 @@ body {
     font-family: sans-serif;
     overflow-x: hidden;
     scroll-behavior: smooth;
-    
+    background: rgb(229, 232, 237);
 }
 header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
-    height: 70px;
+    height: 50px;
     background-color: rgb(12, 77, 162);
     box-shadow: 0 0 10px rgb(50, 50, 50);
     display: flex;
     flex-wrap: nowrap;
     justify-content: left;
     align-items: center;
-    z-index: 9999;
+    z-index: 999;
+}
+nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 20vw;
+    height: 100vh;
+    padding: 30px 10px;
+    background: rgb(255, 255, 255);
+    z-index: 9991;
+    box-shadow: 0 10px 10px rgb(200, 200, 200);
+}
+.logoTitle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: calc(20vw + 20px);
+    text-align: center;
+    box-shadow: 0 0 5px rgb(100, 100, 100);
+    color: rgb(12, 77, 162);
+    font-weight: 700;
+    line-height: 50px;
+    font-size: 1.7em;
+}
+menu {
+    position: relative;
+    left: -10px;
+    top: 30px;
+    width: calc(20vw + 20px);
+}
+.menuItem {
+    display: block;
+    text-decoration: none;
+    padding-left: 20px;
+    width: 20vw;
+    height: 2em;
+    line-height: 2em;
+    transition-duration: 500ms;
+    color: rgb(87, 56, 77);
+}
+.menuItem:hover {
+    background: rgb(200, 200, 200);
 }
 .step {
     color: rgb(255, 255, 255);
     font-weight: lighter;
     border: 1px solid rgb(255, 255, 255);
-    padding: 1em;
+    padding: 0.5em;
     border-radius: 4px;
     transition-duration: 300ms;
-    margin-left: 10px;
 }
 .step:hover {
     cursor: pointer;
@@ -46,11 +88,19 @@ header {
 }
 #content {
     position: relative;
-    top: 70px;
-    left: 0;
-    height: calc(100vh - 70px);
-    width: 100vw;
+    top: 50px;
+    left: 23vw;
+    width: 71vw;
     padding: 30px;
+    background: rgb(255, 255, 255);
+}
+.showBook {
+    padding: 5px;
+}
+.statusBook {
+    float: right;
+    text-decoration: none;
+    text-align: center;
 }
 .showContent {
     left: 0!important;
@@ -76,14 +126,16 @@ header {
 }
 .btn:hover {
     box-shadow: 0 5px 10px rgb(50, 50, 50);
+    cursor: pointer;
 }
 .navRight {
     position: fixed;
     right: 0;
     width: 200px;
-    height: 80vh;
-    top: 15vh;
+    height: calc(100vh - 50px);
+    top: 50px;
     box-shadow: 0 0 10px rgb(50, 50, 50);
+    background: rgb(255, 255, 255);
     padding: 10px;
     overflow-x: hidden;
     overflow-y: scroll;

@@ -2,6 +2,8 @@
 
     @session_start();
 
+    $_SESSION['login'] = 1;
+
     if( !isset($_SESSION['login']) ) {
         echo '<script>location.href = "../../index"</script>';
     }
@@ -9,9 +11,6 @@
     $book = trim($_GET['book']);
 
     require_once '../../core/db/db.php';
-
-    $sql = 'CREATE TABLE IF NOT EXISTS parts_'.$book.'(id INT NOT NULL AUTO_INCREMENT, part VARCHAR (255) NOT NULL, PRIMARY KEY (ID) )';
-    $pdo->query($sql);
 
     $getPartsSql = 'SELECT * FROM parts_'.$book.'';
     $res = $pdo->query($getPartsSql);
@@ -31,22 +30,23 @@
 </head>
 <body>
     <header>
-        <!--<span class="step" onclick="location.href = '../index'">Панель</span>-->
-        <span class="step completeStep">Основное</span>
-        <span class="step completeStep" onclick="location.href = 'parts?book=<?=$book?>'">Содержание</span>
-        <span class="step activeStep" onclick="location.href = 'text?book=<?=$book?>'">Текст</span>
+        <p style="position: fixed; left: 25vw; color: white;">Редактирование книги - добавить содержание</p>
     </header>
+    <?php require_once '../public/components/header.php'; ?>
     <section id="content">
-
         <!-- Include stylesheet -->
         <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
         <style>
             .ql-toolbar {
-                width: 90vw;
+                width: 70vw;
+            }
+            .ql-video {
+                width: 100%;
+                height: 100%;
             }
         </style>
         <!-- Create the editor container -->
-        <div id="editor" style="width: 90vw; height: 65vh">
+        <div id="editor" style="width: 70vw; height: 65vh">
 
         <p><br></p>
         </div>
@@ -58,7 +58,7 @@
         <script>
         var toolbarOptions = [
         ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
-        //['blockquote', 'code-block'],
+        ['blockquote', 'code-block'],
 
         //[{ 'header': 1 }, { 'header': 2 }],               // custom button values
         [{ 'list': 'ordered'}, { 'list': 'bullet' }],
@@ -72,8 +72,7 @@
         [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
         [{ 'font': [] }],
         [{ 'align': [] }],
-
-        ['link', 'image'],
+        ['link', 'image', 'video'],
         ['clean']                                         // remove formatting button
         ];
         var quill = new Quill('#editor', {
@@ -83,7 +82,6 @@
             theme: 'snow'
         });
         </script>
-
         <form enctype="multipart/form-data" name="formParts" action="../core/newBook/createText" method="POST">
             <select name="part" class="inp">
                 <?php
@@ -102,7 +100,7 @@
     <script>
         let content = document.querySelector('.ql-editor');
         let part = document.querySelector('#resText');
-    
+
         function appendText() {
             part.value = content.innerHTML;
         }

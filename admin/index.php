@@ -2,6 +2,8 @@
 
     @session_start();
 
+    $_SESSION['login'] = 1;
+
     if( empty($_SESSION['login']) ) {
         echo '<script>location.href = "../index"</script>';
     }
@@ -18,16 +20,13 @@
 </head>
 <body>
     <header>
-        <span class="step activeStep">Панель</span>
+        <p style="position: fixed; left: 25vw; color: white;">Главная</p>
     </header>
+    <?php require_once 'public/components/header.php'; ?>
     <section id="content">
-        <button class="btn" onclick="location.href = 'createBook/index'">Создать книгу</button>
-        <br>
-        <button class="btn">Редактировать книгу</button>
-        <?php
-
-var_dump($_SESSION);
-?>
+        <p style="text-align: center;">
+            <img src="../public/img/logoRu.webp" style="width: 350px;">
+        </p>
     </section>
 </body>
 </html>

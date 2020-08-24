@@ -3,61 +3,12 @@
     $style = 'footer';
     $styleTwo = 'contacts';
     $styleThree = 'style';
-
+    $title = 'Contacts';
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<?php
-
-    @session_start();
-
-    if( !isset($_SESSION['lang']) ) {
-        $_SESSION['lang'] = 'kz';
-    }
-
-	// Если пользователь сменил язык
-	if( isset($_GET['lang']) ) {
-        $_SESSION['lang'] = trim($_GET['lang']);
-	}
-
-    // Подключение файла всех данных для языка
-    switch( $_SESSION['lang'] ) {
-        case 'ru':
-            $lang = 'ru';
-            $logo = 'logoRu';
-            $title = 'ru';
-            $newLang = 'kz';
-            $language = 'Язык';
-        
-            // Index page
-            $indexHeader = 'Издательство Мектеп';
-        
-            // Menu items
-            $home = 'Главная';
-            $lib = 'Библиотека';
-            $contacts = 'Контакты';
-            $door = 'Войти';
-            
-        case 'kz':
-            $lang = 'kz';
-            $logo = 'logoKz';
-            $title = 'kz';
-            $newLang = 'ru';
-            $language = 'Тiл';
-        
-            // Index page
-            $indexHeader = 'Мектеп Баспасы';
-            
-            // Menu items
-            $home = 'Бас меню';
-            $lib = 'Кітапхана';
-            $contacts = 'Контакты';
-            $door = 'Кiру';
-        
-    }
-
-?>
     <meta charset="UTF-8">
     <meta name="author" content="WebNet">
     <meta name="description" content="<?=$title?>">
@@ -87,44 +38,8 @@
         }
     </style>
     <?php
-        require_once 'public/components/signModal.php';
+        require_once 'public/components/header.php';
     ?>
-    <header>
-        <a href="index" class="logoLink">
-            <img src="public/img/<?=$logo?>.webp" alt="логотип издательства Мектеп" class="logoHeader">
-        </a>
-        <img src="public/img/icons/menu.png" alt="burger menu" class="menuBurger">
-        <div class="language">
-            <span class="lang" onclick="location.href = '?lang=<?=$newLang?>'">
-                <?php
-
-                    if($_SESSION['lang'] == 'kz') {
-                        echo 'рус';
-                    } else {
-                        echo 'қаз';
-                    }
-					
-                ?>
-            </span>
-        </div>
-        <menu class="menuHeader">
-            <a href="index" class="menuItem">
-                <?=$home?>
-            </a>
-            <a href="library" class="menuItem">
-                <?=$lib?>
-            </a>
-            <a href="contacts" class="menuItem">
-                <?=$contacts?>
-            </a>
-            <span onclick="getSignModal()" class="menuItem">
-                <?=$door?>
-            </span>
-
-        </menu>
-    </header>
-    <script src="public/js/mobile/menu.js"></script>
-
     <section id="content">
         <?php
             require_once 'public/components/contacts.php';

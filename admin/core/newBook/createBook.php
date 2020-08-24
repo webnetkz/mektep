@@ -24,11 +24,23 @@
     if (move_uploaded_file($_FILES['titleImg']['tmp_name'], $uploadfile)) {
 
         // Добавление данных в бд
-        $sql = 'INSERT INTO books(`level`, `subject`, `lang`, `pack`, `titleImg`) VALUES("'.$level.'", "'.$subject.'", "'.$lang.'", "'.$pack.'", "'.$_FILES['titleImg']['name'].'")';
-        
+        $sql = 'INSERT INTO books(`level`, `subject`, `lang`, `pack`, `titleImg`, `status`) VALUES("'.$level.'", "'.$subject.'", "'.$lang.'", "'.$pack.'", "'.$_FILES['titleImg']['name'].'", 0)';  
         $res = $pdo->query($sql);
 
+        // Создание таблицы глав
+        $sqlCreateParts = 'CREATE TABLE IF NOT EXISTS parts_'.$lastId.'(id INT NOT NULL AUTO_INCREMENT, part VARCHAR (255) NOT NULL, PRIMARY KEY (ID) )';
+        $pdo->query($sqlCreateParts);
+
+        // Создание таблицы контента
+        $sqlCreateBook = 'CREATE TABLE IF NOT EXISTS book_'.$lastId.'(id INT NOT NULL AUTO_INCREMENT, part VARCHAR (255) NOT NULL, content LONGTEXT NOT NULL, PRIMARY KEY (ID) )';
+        $pdo->query($sqlCreateBook);
+
+        // Создание таблицы тестов
+        $sqlCreateTest = 'CREATE TABLE IF NOT EXISTS tests_'.$lastId.'(id INT NOT NULL AUTO_INCREMENT, part VARCHAR (255) NOT NULL, content LONGTEXT NOT NULL, PRIMARY KEY (ID) )';
+        $pdo->query($sqlCreateTest);
+
+        // Редирект на страницу редактирования учебника
         if($res) {
-            echo '<script>location.href = "../../createBook/parts?book='.$lastId.'"</script>';
+            echo '<script>location.href = "../../editBook/index?book='.$lastId.'"</script>';
         }
     }

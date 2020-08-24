@@ -26,7 +26,6 @@
 }
 .searchInp:hover {
     cursor: pointer;
-    background-color: rgb(248, 251, 255);
 }
 .searchInp::placeholder {
     color: rgb(12, 77, 162);
@@ -47,8 +46,23 @@
     background-size: 18px;
     background-position: 3% 40%;
 }
-.searchInput:focus {
-    transform: scale(1.1);
+.searchBtn {
+    position: relative;
+    left: -60px;
+    padding: 3px 7px;
+    border-radius: 30px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    text-align: center;
+    outline: none;
+    transition-duration: 600ms;
+    background: rgb(12, 77, 162);
+    color: rgb(255, 255, 255);
+    border: none;
+}
+.searchBtn:hover {
+    padding-right: 50px;
+    left: -103px;
 }
 @media only screen and (max-width: 1000px) {
 

@@ -1,13 +1,13 @@
 ﻿<footer>
     <img src="public/img/logoRu.webp" alt="Логотип издательства Мектеп" class="logoFooter">
     <menu class="menuFooter">
-        <a href="index" class="menuItemF">
+        <a href="index?lang=<?=$lang?>" class="menuItemF">
             <?=$home?>
         </a>
-        <a href="library" class="menuItemF">
+        <a href="library?lang=<?=$lang?>" class="menuItemF">
             <?=$lib?>
         </a>
-        <a href="contacts" class="menuItemF">
+        <a href="contacts?lang=<?=$lang?>" class="menuItemF">
             <?=$contacts?>
         </a>
     </menu>
@@ -15,7 +15,7 @@
             <span class="lang" onclick="location.href = '?lang=<?=$newLang?>'">
                 <?php
 
-                    if($_SESSION['lang'] == 'kz') {
+                    if($lang == 'kz') {
                         echo 'рус';
                     } else {
                         echo 'қаз';

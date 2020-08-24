@@ -39,14 +39,17 @@ header {
     }
 }
 .logoHeader {
-    height: 70px;
-    padding: 7px;
+    height: 90px;
     transition-duration: 900ms;
 }
 .language {
-    position: relative;
-    left: 50px;
+    position: absolute;
+    right: 50px;
     transition-duration: 300ms;
+}
+.language:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .menuItem:hover {
     transform: scale(1.1);
@@ -60,8 +63,8 @@ header {
 }
 .menuHeader {
     display: flex;
-    position: absolute;
-    right: 50px;
+    position: relative;
+    left: 200px;
     font-size: 1.5em;
 }
 .menuLink {
@@ -132,15 +135,21 @@ header {
     header {
         z-index: 999;
     }
+    .logoLink {
+        border-radius: 4px;
+        position: relative;
+        left: 30vw;
+    }
     .linkBtn {
         position: relative;
         top: 58vh;
     }
     .menuHeader {
-        right: 0px;
+        position: absolute;
         top: -140vh;
+        left: 0px;
         flex-direction: column;
-        background-color: rgba(255, 255, 255, 1);
+        background-color: rgba(255, 255, 255, 0.9);
         width: 100vw;
         height: calc(100vh - 50px);
         padding-top: 100px;
@@ -159,11 +168,11 @@ header {
     .menuBurger {
         display: block;
         position: relative;
-        left: 60vw;
+        left: 4vw;
         height: 50%;
         z-index: 9999;
     }
     .language {
-        left: 35px;
+        right: 4vw;
     }
 }

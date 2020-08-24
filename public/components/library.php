@@ -19,7 +19,7 @@
 
     ?>
 
-    <!--<div class="book">
+    <div class="book">
         <img src="public/img/b1.jpg" alt="" class="bookImg">
         <p class="bookDesc">Алгебра Алгебра Алгебра</p>
     </div>
@@ -101,7 +101,7 @@
     </div>
     <div class="book">
         <img src="public/img/b1.jpg" alt="" class="bookImg">
-        <p class="bookDesc">Алгебра</p>
+        <p class="bookDesc">123</p>
     </div>
     <div class="book">
         <img src="public/img/b1.jpg" alt="" class="bookImg">
@@ -130,7 +130,7 @@
     <div class="book">
         <img src="public/img/b1.jpg" alt="" class="bookImg">
         <p class="bookDesc">Алгебра</p>
-    </div>-->
+    </div>
 </section>
 <script>
     function filter(elem) {
@@ -144,5 +144,25 @@
         for(let i = 0; i < selectBooks.length; i++) {
             selectBooks[i].style.display = 'block';
         }
+    }
+
+    function searchFilter(elem) {
+        let allBooks = document.querySelectorAll('.book');
+
+        elem.onchange = () => {
+
+            for(let i = 0; i < allBooks.length; i++) {
+                let subjectBook = allBooks[i].querySelector('.bookDesc');
+                console.log(subjectBook.innerText);
+                if(subjectBook.innerText != elem.value) {
+                    allBooks[i].style.display = 'none';
+                }
+            }      
+        }
+    }
+
+    function findFun() {
+        let readInp = document.querySelector('#findInp');
+        searchFilter(readInp);
     }
 </script>

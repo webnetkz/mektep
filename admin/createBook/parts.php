@@ -2,6 +2,8 @@
 
     @session_start();
 
+    $_SESSION['login'] = 1;
+
     if( !isset($_SESSION['login']) ) {
         echo '<script>location.href = "../../index"</script>';
     }
@@ -9,9 +11,6 @@
     $book = trim($_GET['book']);
 
     require_once '../../core/db/db.php';
-
-    $sql = 'CREATE TABLE IF NOT EXISTS parts_'.$book.'(id INT NOT NULL AUTO_INCREMENT, part VARCHAR (255) NOT NULL, PRIMARY KEY (ID) )';
-    $pdo->query($sql);
 
     $getPartsSql = 'SELECT * FROM parts_'.$book.'';
     $res = $pdo->query($getPartsSql);
@@ -31,26 +30,25 @@
 </head>
 <body>
     <header>
-        <!--<span class="step" onclick="location.href = '../index'">Панель</span>-->
-        <span class="step completeStep">Основное</span>
-        <span class="step activeStep" onclick="location.href = 'parts?book=<?=$book?>'">Содержание</span>
+        <p style="position: fixed; left: 25vw; color: white;">Редактирование книги - добавить главу</p>
     </header>
-    <section id="content" style="display: flex;">
+<?php require_once '../public/components/header.php'; ?>
+    <section id="content" style="width: 55vw;">
         <form enctype="multipart/form-data" name="formParts" action="../core/newBook/createParts" method="POST">
-            <input type="text" class="inp" name="part" placeholder="Введите название главы" required>
-            <br>
-            <input type="submit" class="btn" value="Сохранить" name="saveBook">
-            <input type="text" hidden name="book" value="<?=$book?>">
-        </form>
-        <div class="navRight">
-            <ul class="navList">
-                <?php
-                    foreach($res as $k => $v) {
-                        echo '<li>'.$v['id'].' . '.$v['part'].'</li>';
-                    }
-                ?>
-            </ul>
-        </div>
+                <input type="text" class="inp" autocomplete="off" name="part" placeholder="Введите название главы" required>
+                <br>
+                <input type="submit" class="btn" value="Сохранить" name="saveBook">
+                <input type="text" hidden name="book" value="<?=$book?>">
+            </form>
+            <div class="navRight">
+                <ul class="navList">
+                    <?php
+                        foreach($res as $k => $v) {
+                            echo '<li>'.$v['id'].' . '.$v['part'].'</li>';
+                        }
+                    ?>
+                </ul>
+            </div>
     </section>
 </body>
 </html>

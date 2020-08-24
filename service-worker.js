@@ -4,7 +4,7 @@ self.addEventListener('install', function(e) {
      return cache.addAll([
        '/',
        '/index',
-       '/library',
+       //'/library',
        '/contacts',
        '/public/json/manifest.json',
        '/public/img/logoKz.webp',
