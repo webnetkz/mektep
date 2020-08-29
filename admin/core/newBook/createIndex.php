@@ -10,16 +10,6 @@
     $resParts = $pdo->query($getPartsSQL);
     $resParts = $resParts->fetchAll(PDO::FETCH_ASSOC);
 
-    // Получение всего контента книги
-    $getContentSQL = 'SELECT * FROM book_'.$book.';';
-    $resContent = $pdo->query($getContentSQL);
-    $resContent = $resContent->fetchAll(PDO::FETCH_ASSOC);
-
-    // Получение всех тестов книги
-    $getTestsSQL = 'SELECT * FROM tests_'.$book.';';
-    $resTests = $pdo->query($getTestsSQL);
-    $resTests = $resTests->fetchAll(PDO::FETCH_ASSOC);
-
     /*
     echo '<pre>';
     var_dump($resParts);
@@ -94,6 +84,9 @@
     <div class="h">
 		<button class="inp" id="navig" onclick="xxx()">Навигация</button>
     </div>
+    <br>
+    <br>
+    <br>
     <div class="navigation">';
     
 	$set2 = "</div>
@@ -116,23 +109,35 @@
         $set1 .= '<a href="#'.$v['id'].'" class="navigationItem">'.$v['part'].'</a>';
     }
 
-    $q = 0;
     // Расшифровка полученого контента
-    foreach($resContent as $k => $v) {
-        foreach($resTests as $key => $value) {
-            if($v['part'] == $value['part']) {
-                if($value['id'] != $value['part']) {
-                    $resContent .= html_entity_decode($value['content']);
-                } else {
-                    $resContent .= html_entity_decode($v['content']) .''. html_entity_decode($value['content']);
-                }
-            }
+    foreach($resParts as $k => $v) {
+    
+        // Получение всего контента книги
+        $getContentSQL = 'SELECT * FROM book_'.$book.' WHERE part ="'.$v['id'].'";';
+        $resContent = $pdo->query($getContentSQL);
+        $resContent = $resContent->fetchAll(PDO::FETCH_ASSOC);
+
+        // Получение всех тестов книги
+        $getTestsSQL = 'SELECT * FROM tests_'.$book.' WHERE part ="'.$v['id'].'";';
+        $resTests = $pdo->query($getTestsSQL);
+        $resTests = $resTests->fetchAll(PDO::FETCH_ASSOC);
+        
+        $xx = array_merge($resContent, $resTests);
+
+        foreach($xx as $key => $value) {
+            $qq .= html_entity_decode($value['content']);
         }
+        //echo '<pre>';
+        //var_dump($resTests);
+        //var_dump($resContent);
+        //$resContent .= html_entity_decode($resContent['content']);
     }
+
+
 
     $set = $set1.''.$set2;
 
-    $set = $set .''. $resContent;
+    $set = $set .''. $qq;
 
     $f = fopen('../../../books/'.$book.'/index.html', 'w');
     @fwrite($f, $set);

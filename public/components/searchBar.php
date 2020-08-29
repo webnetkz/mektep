@@ -1,5 +1,5 @@
 ﻿<section id="searchBar">
-    <form action="#" method="GET" id="searchForm">
+    <form method="GET" id="searchForm">
         <select name="lavel" class="searchInp" onchange="filter(this)">
             <option selected disabled><?=$class?></option>
             <option value="1">1</option>
@@ -30,7 +30,7 @@
     </form>
     <form id="searchInputFrom">
         <span class="searchIcon"></span>
-        <input type="text" class="searchInput searchInp" placeholder="" id="findInp" onchange="searchFilter(this)">
-        <button class="searchBtn" onclick="findFun()" type="submit"><?=$search?></button>
+        <input type="text" class="searchInput searchInp" placeholder="" name="findInp">
+        <button class="searchBtn" type="submit"><?=$search?></button>
     </form>
 </section>

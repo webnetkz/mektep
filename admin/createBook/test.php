@@ -43,15 +43,15 @@
             </p>
                 <br>
             <p>
-                <a href="tests/2?book=<?=$book?>">Тест с вставкой слова</a>
+                <a href="tests/3?book=<?=$book?>">Тест с вставкой слова</a>
             </p>
                 <br>
                 <p>
-                <a href="tests/2?book=<?=$book?>">Тест с перетягиванием</a>
+                <a href="tests/4?book=<?=$book?>">Тест с вставкой символа</a>
             </p>
                 <br>
                 <p>
-                <a href="tests/2?book=<?=$book?>">Тест с картинками</a>
+                <a href="tests/4?book=<?=$book?>">Тест с перетягивание</a>
             </p>
     </section>
 

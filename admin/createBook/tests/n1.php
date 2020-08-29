@@ -10,31 +10,37 @@ $res = $pdo->query($sqlGetPartId);
 $part = $res->fetch(PDO::FETCH_ASSOC);
 $part = $part['id'];
 
+// Получение id теста
+$sqlGetTestId = 'SELECT id FROM tests_'.$book.' WHERE part = "'.$part.'" ORDER BY id DESC';
+$resT = $pdo->query($sqlGetTestId);
+$test = $resT->fetch(PDO::FETCH_ASSOC);
+$test = $test['id'];
+
+
 if(!empty($_GET['trueFalse1'])) {
-    $trueFalse1 = 'true'.$part;
+    $trueFalse1 = 'true'.$test;
 } else {
     $trueFalse1 = 'false';
 }
 
 if(!empty($_GET['trueFalse2'])) {
-    $trueFalse2 = 'true'.$part;
+    $trueFalse2 = 'true'.$test;
 } else {
     $trueFalse2 = 'false';
 }
 
 if(!empty($_GET['trueFalse3'])) {
-    $trueFalse3 = 'true'.$part;
+    $trueFalse3 = 'true'.$test;
 } else {
     $trueFalse3 = 'false';
 }
 
 if(!empty($_GET['trueFalse4'])) {
-    $trueFalse4 = 'true'.$part;
+    $trueFalse4 = 'true'.$test;
 } else {
     $trueFalse4 = 'false';
 }
 
-var_dump($part);
 $content = <<<EOL
 <div class="test">
 <style>
@@ -49,9 +55,14 @@ $content = <<<EOL
 .line {margin: 30px;}
 .answers {margin-left: 40px;}
 .inpTest {display: inline;}
-.resultTest{$part} 
+.resultTest{$test} 
 {text-align: center;}
-.resultTest{$part} > p {
+.resultTest{$test} > p {
+    padding: 0.7em;
+    border-radius: 1em;
+    color: white;
+}
+.resultTest > p {
     padding: 0.7em;
     border-radius: 1em;
     color: white;
@@ -63,31 +74,32 @@ $content = <<<EOL
 <hr class="line">
 <div class="answers">
 <p>
-<input type="radio" class="inpTest {$trueFalse1}" name="test1[]{$part}" onclick="checkTest{$part}(this)">
+<input type="radio" class="inpTest {$trueFalse1}" name="test1[]{$test}" onclick="checkTest{$test}(this)">
 <span>{$_GET['answer1']}</span>
 </p>
 <p>
-<input type="radio" class="inpTest {$trueFalse2}" name="test1[]{$part}" onclick="checkTest{$part}(this)">
+<input type="radio" class="inpTest {$trueFalse2}" name="test1[]{$test}" onclick="checkTest{$test}(this)">
 <span>{$_GET['answer2']}</span>
 </p>
-<p><input type="radio" class="inpTest {$trueFalse3}" name="test1[]{$part}" onclick="checkTest{$part}(this)">
+<p><input type="radio" class="inpTest {$trueFalse3}" name="test1[]{$test}" onclick="checkTest{$test}(this)">
 <span>{$_GET['answer3']}</span>
 </p>
 <p>
-<input type="radio" class="inpTest {$trueFalse4}" name="test1[]{$part}" onclick="checkTest{$part}(this)">
+<input type="radio" class="inpTest {$trueFalse4}" name="test1[]{$test}" onclick="checkTest{$test}(this)">
 <span>{$_GET['answer4']}</span>
 </p>
+<button class="btn" onclick="document.location.reload(true)">Сбросить</button>
 </div>
 <hr class="line">
-<div class="resultTest{$part}">
+<div class="resultTest{$test}">
 </div>
 </div>
 <script>
-    function checkTest{$part}(elem) {
+    function checkTest{$test}(elem) {
         // Контейнер для результатов теста
-        let resultTest = document.querySelector('.resultTest{$part}');
+        let resultTest = document.querySelector('.resultTest{$test}');
         // Проверяем существует ли данные класс у элемента
-        if(elem.classList.contains('true{$part}')) {
+        if(elem.classList.contains('true{$test}')) {
             resultTest.innerHTML = '<p class="trueAnswer">Верный ответ</p>';
             console.log(true);
         } else {

@@ -1,0 +1,259 @@
+<title>Mektep</title>
+    <meta charset="UTF-8">
+    <style>
+        .h {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3em;
+            box-shadow: 0 0 10px black;
+            background: rgb(12, 77, 162);
+            color: rgb(255, 255, 255);
+            padding-top: 1em;
+            z-index: 99999;
+        }
+		.inp {
+			outline: none;
+			padding: 4px;
+			border-radius: 4px;
+			border: 1px solid rgb(12, 77, 162);
+			margin: 5px;
+			min-width: 200px;
+		}
+		.btn {
+			padding: 7px 12px;
+			border-radius: 50px;
+			color: rgb(255, 255, 255);
+			background: rgb(12, 77, 162);
+			border: 0;
+			outline: none;
+			margin: 5px;
+			min-width: 200px;
+			transition-duration: 400ms;
+		}
+		.btn:hover {
+			box-shadow: 0 5px 10px rgb(50, 50, 50);
+		}
+        .ql-align-center {text-align: center;}
+        .ql-align-right {text-align: right;}
+		.navigation {
+			position: fixed;
+			left: -100vw;
+			width: 200px;
+			height: 80vh;
+			top: 4.5em;
+			box-shadow: 0 0 10px rgb(50, 50, 50);
+			padding: 10px;
+			overflow-x: hidden;
+			overflow-y: scroll;
+			transition-duration: 500ms;
+			z-index: 9999;
+			background-color: rgb(255, 255, 255);
+		}
+		.navigationItem {
+			display: block;
+			padding: 5px;
+        }
+        .ql-video {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <div class="h">
+		<button class="inp" id="navig" onclick="xxx()">Навигация</button>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="navigation"><a href="#1" class="navigationItem">qwe</a><a href="#2" class="navigationItem">ewe</a></div>
+	<script>
+
+        function xxx() {
+            let navigation = document.querySelector('.navigation');
+
+            if(navigation.name == 'hid') {
+                navigation.style.left = '-100vw';
+                navigation.name = ' ';
+            } else {
+                navigation.style.left = '0px';
+                navigation.name = 'hid';
+            }
+        }
+    </script><div style="margin-top: 4em; box-shadow: 0 0 10px rgb(100, 100, 100); padding: 30px;" id="1"><p>1</p></div><div class="test">
+<style>
+.test {
+    position: relative;
+    margin: 50px;
+    padding: 30px;
+    box-shadow: 0 0 10px rgb(200, 200, 200);
+    border-radius: 3em;
+}
+.question {text-align: center;}
+.line {margin: 30px;}
+.answers {margin-left: 40px;}
+.inpTest {display: inline;}
+.resultTest1 
+{text-align: center;}
+.resultTest1 > p {
+    padding: 0.7em;
+    border-radius: 1em;
+    color: white;
+}
+.trueAnswer {background-color: green;}
+.falseAnswer {background-color: red;}
+</style>
+<h2 class="question">1</h2>
+<hr class="line">
+<div class="answers">
+<p>
+<input type="radio" class="inpTest true1" name="test1[]1" onclick="checkTest1(this)">
+<span>1</span>
+</p>
+<p>
+<input type="radio" class="inpTest false" name="test1[]1" onclick="checkTest1(this)">
+<span>1</span>
+</p>
+<p><input type="radio" class="inpTest false" name="test1[]1" onclick="checkTest1(this)">
+<span>1</span>
+</p>
+<p>
+<input type="radio" class="inpTest false" name="test1[]1" onclick="checkTest1(this)">
+<span>1</span>
+</p>
+</div>
+<hr class="line">
+<div class="resultTest1">
+</div>
+</div>
+<script>
+    function checkTest1(elem) {
+        // Контейнер для результатов теста
+        let resultTest = document.querySelector('.resultTest1');
+        // Проверяем существует ли данные класс у элемента
+        if(elem.classList.contains('true1')) {
+            resultTest.innerHTML = '<p class="trueAnswer">Верный ответ</p>';
+            console.log(true);
+        } else {
+            resultTest.innerHTML = '<p class="falseAnswer">Ответ не верный</p>';
+            console.log(false);
+        }}
+</script>
+<div class="test">
+<style>
+.test {
+    position: relative;
+    margin: 50px;
+    padding: 30px;
+    box-shadow: 0 0 10px rgb(200, 200, 200);
+    border-radius: 3em;
+}
+.question {text-align: center;}
+.line {margin: 30px;}
+.answers {margin-left: 40px;}
+.inpTest {display: inline;}
+.resultTest1 
+{text-align: center;}
+.resultTest1 > p {
+    padding: 0.7em;
+    border-radius: 1em;
+    color: white;
+}
+.trueAnswer {background-color: green;}
+.falseAnswer {background-color: red;}
+</style>
+<h2 class="question">3</h2>
+<hr class="line">
+<div class="answers">
+<p>
+<input type="radio" class="inpTest false" name="test1[]1" onclick="checkTest1(this)">
+<span>3</span>
+</p>
+<p>
+<input type="radio" class="inpTest false" name="test1[]1" onclick="checkTest1(this)">
+<span>3</span>
+</p>
+<p><input type="radio" class="inpTest true1" name="test1[]1" onclick="checkTest1(this)">
+<span>3</span>
+</p>
+<p>
+<input type="radio" class="inpTest false" name="test1[]1" onclick="checkTest1(this)">
+<span>3</span>
+</p>
+</div>
+<hr class="line">
+<div class="resultTest1">
+</div>
+</div>
+<script>
+    function checkTest1(elem) {
+        // Контейнер для результатов теста
+        let resultTest = document.querySelector('.resultTest1');
+        // Проверяем существует ли данные класс у элемента
+        if(elem.classList.contains('true1')) {
+            resultTest.innerHTML = '<p class="trueAnswer">Верный ответ</p>';
+            console.log(true);
+        } else {
+            resultTest.innerHTML = '<p class="falseAnswer">Ответ не верный</p>';
+            console.log(false);
+        }}
+</script>
+<div style="margin-top: 4em; box-shadow: 0 0 10px rgb(100, 100, 100); padding: 30px;" id="2"><p>2</p></div><div class="test">
+<style>
+.test {
+    position: relative;
+    margin: 50px;
+    padding: 30px;
+    box-shadow: 0 0 10px rgb(200, 200, 200);
+    border-radius: 3em;
+}
+.question {text-align: center;}
+.line {margin: 30px;}
+.answers {margin-left: 40px;}
+.inpTest {display: inline;}
+.resultTest2 
+{text-align: center;}
+.resultTest2 > p {
+    padding: 0.7em;
+    border-radius: 1em;
+    color: white;
+}
+.trueAnswer {background-color: green;}
+.falseAnswer {background-color: red;}
+</style>
+<h2 class="question">2</h2>
+<hr class="line">
+<div class="answers">
+<p>
+<input type="radio" class="inpTest false" name="test1[]2" onclick="checkTest2(this)">
+<span>2</span>
+</p>
+<p>
+<input type="radio" class="inpTest true2" name="test1[]2" onclick="checkTest2(this)">
+<span>2</span>
+</p>
+<p><input type="radio" class="inpTest false" name="test1[]2" onclick="checkTest2(this)">
+<span>2</span>
+</p>
+<p>
+<input type="radio" class="inpTest false" name="test1[]2" onclick="checkTest2(this)">
+<span>2</span>
+</p>
+</div>
+<hr class="line">
+<div class="resultTest2">
+</div>
+</div>
+<script>
+    function checkTest2(elem) {
+        // Контейнер для результатов теста
+        let resultTest = document.querySelector('.resultTest2');
+        // Проверяем существует ли данные класс у элемента
+        if(elem.classList.contains('true2')) {
+            resultTest.innerHTML = '<p class="trueAnswer">Верный ответ</p>';
+            console.log(true);
+        } else {
+            resultTest.innerHTML = '<p class="falseAnswer">Ответ не верный</p>';
+            console.log(false);
+        }}
+</script>

@@ -27,8 +27,9 @@
     </header>
     <?php require_once '../public/components/header.php'; ?>
     <section id="content">
-    <form enctype="multipart/form-data" action="../core/books/uploadFile" method="POST">
+    <form enctype="multipart/form-data" action="../core/books/uploadFile">
             <input type="file" class="inp" name="newFile" required>
+            <input type="text" name="book" value="<?=$book?>" hidden>
             <br>
             <input type="submit" class="btn" value="Сохранить" name="saveBook">
         </form>
