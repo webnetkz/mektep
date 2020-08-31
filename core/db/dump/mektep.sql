@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Авг 31 2020 г., 13:02
+-- Время создания: Авг 31 2020 г., 13:14
 -- Версия сервера: 10.3.22-MariaDB
 -- Версия PHP: 7.1.33
 
@@ -254,6 +254,13 @@ CREATE TABLE `tests_1` (
   `content` longtext COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Дамп данных таблицы `tests_1`
+--
+
+INSERT INTO `tests_1` (`id`, `part`, `content`) VALUES
+(1, '2', '&lt;div class=&quot;test&quot;&gt;\r\n&lt;style&gt;\r\n.test {\r\n    position: relative;\r\n    margin: 50px;\r\n    padding: 30px;\r\n    box-shadow: 0 0 10px rgb(200, 200, 200);\r\n    border-radius: 3em;\r\n}\r\n.question {text-align: center;}\r\n.line {margin: 30px;}\r\n.answers {margin-left: 40px;}\r\n.inpTest {display: inline;}\r\n.resultTest \r\n{text-align: center;}\r\n.resultTest &gt; p {\r\n    padding: 0.7em;\r\n    border-radius: 1em;\r\n    color: white;\r\n}\r\n.resultTest &gt; p {\r\n    padding: 0.7em;\r\n    border-radius: 1em;\r\n    color: white;\r\n}\r\n.trueAnswer {background-color: green;}\r\n.falseAnswer {background-color: red;}\r\n&lt;/style&gt;\r\n&lt;h2 class=&quot;question&quot;&gt;К какому разделу физики относится &quot;Кинематика&quot;?&lt;/h2&gt;\r\n&lt;hr class=&quot;line&quot;&gt;\r\n&lt;div class=&quot;answers&quot;&gt;\r\n&lt;p&gt;\r\n&lt;input type=&quot;radio&quot; class=&quot;inpTest false&quot; name=&quot;test1[]&quot; onclick=&quot;checkTest(this)&quot;&gt;\r\n&lt;span&gt;К динамике&lt;/span&gt;\r\n&lt;/p&gt;\r\n&lt;p&gt;\r\n&lt;input type=&quot;radio&quot; class=&quot;inpTest true&quot; name=&quot;test1[]&quot; onclick=&quot;checkTest(this)&quot;&gt;\r\n&lt;span&gt;К механике&lt;/span&gt;\r\n&lt;/p&gt;\r\n&lt;p&gt;&lt;input type=&quot;radio&quot; class=&quot;inpTest false&quot; name=&quot;test1[]&quot; onclick=&quot;checkTest(this)&quot;&gt;\r\n&lt;span&gt;К статике&lt;/span&gt;\r\n&lt;/p&gt;\r\n&lt;p&gt;\r\n&lt;input type=&quot;radio&quot; class=&quot;inpTest false&quot; name=&quot;test1[]&quot; onclick=&quot;checkTest(this)&quot;&gt;\r\n&lt;span&gt;К термодинамике&lt;/span&gt;\r\n&lt;/p&gt;\r\n&lt;button class=&quot;btn&quot; onclick=&quot;document.location.reload(true)&quot;&gt;Сбросить&lt;/button&gt;\r\n&lt;/div&gt;\r\n&lt;hr class=&quot;line&quot;&gt;\r\n&lt;div class=&quot;resultTest&quot;&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;script&gt;\r\n    function checkTest(elem) {\r\n        // Контейнер для результатов теста\r\n        let resultTest = document.querySelector(\'.resultTest\');\r\n        // Проверяем существует ли данные класс у элемента\r\n        if(elem.classList.contains(\'true\')) {\r\n            resultTest.innerHTML = \'&lt;p class=&quot;trueAnswer&quot;&gt;Верный ответ&lt;/p&gt;\';\r\n            console.log(true);\r\n        } else {\r\n            resultTest.innerHTML = \'&lt;p class=&quot;falseAnswer&quot;&gt;Ответ не верный&lt;/p&gt;\';\r\n            console.log(false);\r\n        }}\r\n&lt;/script&gt;\r\n');
+
 -- --------------------------------------------------------
 
 --
@@ -404,7 +411,7 @@ ALTER TABLE `redactors`
 -- AUTO_INCREMENT для таблицы `tests_1`
 --
 ALTER TABLE `tests_1`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT для таблицы `tests_2`
