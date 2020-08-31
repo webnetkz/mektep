@@ -16,7 +16,7 @@
         $part = $part['id'];
 
         $content = trim($_POST['content']);
-        $content = '<div style="margin-top: 4em; box-shadow: 0 0 10px rgb(100, 100, 100); padding: 30px;" id="'.$part.'">'.$content.'</div>';
+        $content = '<div style="margin-top: 4em;" id="'.$part.'">'.$content.'</div>';
         $content = htmlentities($content);
 
         $appendSql = 'INSERT INTO book_'.$book.'(`part`, `content`) VALUES ("'.$part.'", "'.$content.'")';

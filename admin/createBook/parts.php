@@ -35,7 +35,7 @@
 <?php require_once '../public/components/header.php'; ?>
     <section id="content" style="width: 55vw;">
         <form enctype="multipart/form-data" name="formParts" action="../core/newBook/createParts" method="POST">
-                <input type="text" class="inp" autocomplete="off" name="part" placeholder="Введите название главы" required>
+                <input type="text" class="inp" style="width: 100%;" autocomplete="off" name="part" placeholder="Введите название главы" required>
                 <br>
                 <input type="submit" class="btn" value="Сохранить" name="saveBook">
                 <input type="text" hidden name="book" value="<?=$book?>">

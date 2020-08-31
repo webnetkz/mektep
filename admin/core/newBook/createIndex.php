@@ -22,6 +22,10 @@
     $set1 = '<title>Mektep</title>
     <meta charset="UTF-8">
     <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
         .h {
             position: fixed;
             top: 0;

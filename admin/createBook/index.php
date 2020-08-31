@@ -66,6 +66,7 @@
                 <option value="Русская литература">Русская литература</option>
                 <option value="Художественный труд">Художественный труд</option>
                 <option value="Химия">Химия</option>
+                <option value="История Казахстана">История Казахстана</option>
             </select>
             <br>
             <select name="lang" id="lang" class="inp" required>
