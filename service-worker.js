@@ -11,20 +11,12 @@ self.addEventListener('install', function(e) {
        '/public/img/logoRu.webp',
        '/public/css/style.css',
        '/public/js/headerEffect.js',
-       '/public/img/bgImg/1.webp',
-       '/public/img/bgImg/3.webp',
-       '/public/img/bgImg/5.webp',
-       '/public/img/bgImg/6.webp',
-       '/public/img/bgImg/11.webp',
-       '/public/img/bgImg/12.webp',
-       '/public/img/bgImg/13.webp',
-       '/public/img/miniBgImg/1.webp',
-       '/public/img/miniBgImg/3.webp',
-       '/public/img/miniBgImg/5.webp',
-       '/public/img/miniBgImg/6.webp',
-       '/public/img/miniBgImg/11.webp',
-       '/public/img/miniBgImg/12.webp',
-       '/public/img/miniBgImg/13.webp'
+       '/public/img/bgImg/1.jpg',
+       '/public/img/bgImg/2.jpg',
+       '/public/img/bgImg/3.jpg',
+       '/public/img/miniBgImg/1.jpg',
+       '/public/img/miniBgImg/2.jpg',
+       '/public/img/miniBgImg/3.jpg',
      ]);
    })
  );
