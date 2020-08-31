@@ -51,7 +51,7 @@
             </p>
                 <br>
                 <p>
-                <a href="tests/4?book=<?=$book?>">Тест с перетягивание</a>
+                <a href="tests/5?book=<?=$book?>">Тест с перетягивание</a>
             </p>
     </section>
 
